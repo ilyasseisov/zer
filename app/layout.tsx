@@ -1,17 +1,17 @@
 // FC
-import { FC } from 'react';
+import { FC } from "react";
 // meta
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 // head
-import Head from 'next/head';
+import Head from "next/head";
 // fonts
-import { stolzlFont } from '@/lib/fonts';
+import { stolzlFont } from "@/lib/fonts";
 // styles
-import './globals.css';
+import "../css/style.css";
 ////
 export const metadata: Metadata = {
-  title: 'ZER Design',
-  description: 'Creative and marketing agency',
+  title: "ZER Design",
+  description: "Creative and marketing agency",
 };
 
 type RootLayoutProps = Readonly<{
@@ -20,14 +20,14 @@ type RootLayoutProps = Readonly<{
 
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
-    <html lang='en'>
+    <html lang="en">
       <Head>
         <title>{String(metadata.title)}</title>
-        <meta name='description' content={String(metadata.description)} />
-        <meta charSet='UTF-8' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name="description" content={String(metadata.description)} />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <body className={`${stolzlFont.variable}`}>{children}</body>
+      <body className={`${stolzlFont.variable} bg-dark`}>{children}</body>
     </html>
   );
 };
