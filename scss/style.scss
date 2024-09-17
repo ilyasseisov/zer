@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  // prevent text selection
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    cursor: default;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+}
+
+@layer utilities {
+  /*  */
+
+  /* 20px */
+  .text-20px-capsized {
+    font-size: 20px;
+    line-height: 38px;
+  }
+
+  .text-20px-capsized::before {
+    content: "";
+    margin-bottom: -0.62em;
+    display: table;
+  }
+
+  .text-20px-capsized::after {
+    content: "";
+    margin-top: -0.58em;
+    display: table;
+  }
+  /* END 20px */
+
+  /* 32px */
+  .text-32px-capsized {
+    font-size: 32px;
+    line-height: 46.4px;
+  }
+
+  .text-32px-capsized::before {
+    content: "";
+    margin-bottom: -0.395em;
+    display: table;
+  }
+
+  .text-32px-capsized::after {
+    content: "";
+    margin-top: -0.355em;
+    display: table;
+  }
+  /* END 32px */
+
+  /* 52px */
+  .text-52px-capsized {
+    font-size: 52px;
+    line-height: 60.4px;
+  }
+
+  .text-52px-capsized::before {
+    content: "";
+    margin-bottom: -0.2508em;
+    display: table;
+  }
+
+  .text-52px-capsized::after {
+    content: "";
+    margin-top: -0.2108em;
+    display: table;
+  }
+  /* END 52px */
+
+  /* sm */
+  /* 80px */
+  .text-80px-capsized {
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .text-80px-capsized::before {
+    content: "";
+    margin-bottom: -0.17em;
+    display: table;
+  }
+
+  .text-80px-capsized::after {
+    content: "";
+    margin-top: -0.13em;
+    display: table;
+  }
+  /* END 80px */
+
+  /* md */
+  /* 96px */
+  .text-96px-capsized {
+    font-size: 96px;
+    line-height: 91.2px;
+  }
+
+  .text-96px-capsized::before {
+    content: "";
+    margin-bottom: -0.145em;
+    display: table;
+  }
+
+  .text-96px-capsized::after {
+    content: "";
+    margin-top: -0.105em;
+    display: table;
+  }
+  /* END 96px */
+
+  /* xl */
+  /* 120px */
+  .text-120px-capsized {
+    font-size: 120px;
+    line-height: 108px;
+  }
+
+  .text-120px-capsized::before {
+    content: "";
+    margin-bottom: -0.12em;
+    display: table;
+  }
+
+  .text-120px-capsized::after {
+    content: "";
+    margin-top: -0.08em;
+    display: table;
+  }
+  /* END 120px */
+
+  /* 2xl */
+  /* 160px */
+  .text-160px-capsized {
+    font-size: 160px;
+    line-height: 136px;
+  }
+
+  .text-160px-capsized::before {
+    content: "";
+    margin-bottom: -0.095em;
+    display: table;
+  }
+
+  .text-160px-capsized::after {
+    content: "";
+    margin-top: -0.055em;
+    display: table;
+  }
+  /* END 160px */
+  /*  */
+
+  //   hero mask
+  .mask-hero {
+    mask-image: url("../public/img/maksCircle.svg");
+    mask-repeat: no-repeat;
+    mask-size: 60px;
+    @apply bg-purple-light;
+  }
+  //   END hero mask
+}
