@@ -8,12 +8,9 @@ import { useState } from "react";
 import { FC } from "react";
 // framer motion
 import { motion } from "framer-motion";
-// next image
-import Image from "next/image";
 // components
 import HireUsButton from "./ui/HireUsButton";
-// images
-import images from "@/public/img";
+
 const Hero: FC = () => {
   // hooks
   const [isHovered, setIsHovered] = useState(false);
@@ -73,7 +70,7 @@ const Hero: FC = () => {
 
       {/* body */}
       <div className="flex h-full w-full flex-col items-center justify-center">
-        <h3 className="text-20px-capsized md:text-32px-capsized text-grey mb-8 text-center font-stolzl font-normal md:mb-16">
+        <h3 className="text-20px-capsized md:text-32px-capsized mb-8 text-center font-stolzl font-normal text-grey md:mb-16">
           ZER DESIGN
         </h3>
         <h2 className="mb-16 flex flex-col gap-y-4">
