@@ -22,7 +22,7 @@ const Hero: FC = () => {
     <section className="h-screen bg-dark">
       {/* mask */}
       <motion.div
-        className="mask-hero absolute flex h-full w-full flex-col items-center justify-center"
+        className="mask-hero absolute hidden h-full w-full flex-col items-center justify-center xl:flex"
         animate={{
           WebkitMaskPosition: `${(x ?? 0) - size / 2}px ${(y ?? 0) - size / 2}px`,
           WebkitMaskSize: `${size}px`,
