@@ -1,13 +1,13 @@
 // file import
 import star from "./star.svg";
-import starLg from "./starLg.svg";
 import maksCircle from "./maksCircle.svg";
+import videoPoster from "./videoPoster.png";
 
 //export
 const images = {
   star,
-  starLg,
   maksCircle,
+  videoPoster,
 };
 
 export default images;

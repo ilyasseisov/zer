@@ -1,6 +1,66 @@
-import { FC } from 'react';
+"use client";
+
+// fc
+import { FC } from "react";
+// useRef
+import { useRef } from "react";
+// next video
+import BackgroundVideo from "next-video/background-video";
+// gsap
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// videos
+import getStarted from "/videos/get-started.mp4";
+// images
+import images from "../public/img";
+// register plugin
+gsap.registerPlugin(ScrollTrigger);
 const Reel: FC = () => {
-  return <section></section>;
+  // hooks
+  // useRef
+  const containerRef = useRef(null);
+  const boxRef = useRef(null);
+  // useGSAP
+  useGSAP(() => {
+    //
+    const tl = gsap.timeline().to(boxRef.current, { scale: 2 });
+    //
+    ScrollTrigger.create({
+      trigger: containerRef.current,
+      animation: tl,
+      markers: true,
+      // when the TOP of the trigger hits the TOP of the viewport
+      start: "top top",
+      // when the BOTTOM of the trigger hits the TOP of the viewport
+      end: "bottom top",
+      scrub: 1,
+      pin: true,
+    });
+    //
+  });
+  //
+  // return
+  return (
+    <section
+      ref={containerRef}
+      className="flex h-screen items-center justify-center overflow-hidden bg-dark"
+    >
+      <div ref={boxRef} className="aspect-video w-[40%] bg-purple-light">
+        <BackgroundVideo
+          src={getStarted}
+          style={{
+            aspectRatio: "auto",
+            width: "100%",
+            height: "100%",
+          }}
+          disableTracking
+          poster={images.videoPoster}
+          blurDataURL={images.videoPoster.src}
+        />
+      </div>
+    </section>
+  );
 };
 
 export default Reel;
