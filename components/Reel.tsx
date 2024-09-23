@@ -24,19 +24,25 @@ const Reel: FC = () => {
   // useGSAP
   useGSAP(() => {
     //
-    const tl = gsap.timeline().to(boxRef.current, { scale: 2 });
+    const mm = gsap.matchMedia();
     //
-    ScrollTrigger.create({
-      trigger: containerRef.current,
-      animation: tl,
-      markers: true,
-      // when the TOP of the trigger hits the TOP of the viewport
-      start: "top top",
-      // when the BOTTOM of the trigger hits the TOP of the viewport
-      end: "bottom top",
-      scrub: 1,
-      pin: true,
+    mm.add("(min-width: 1280px)", () => {
+      const tl = gsap.timeline().to(boxRef.current, { scale: 2 });
+      //
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        animation: tl,
+        markers: true,
+        // when the TOP of the trigger hits the TOP of the viewport
+        start: "top top",
+        // when the BOTTOM of the trigger hits the TOP of the viewport
+        end: "bottom top",
+        scrub: 1,
+        pin: true,
+      });
     });
+    //
+
     //
   });
   //
@@ -46,7 +52,10 @@ const Reel: FC = () => {
       ref={containerRef}
       className="flex h-screen items-center justify-center overflow-hidden bg-dark"
     >
-      <div ref={boxRef} className="aspect-video w-[40%] bg-purple-light">
+      <div
+        ref={boxRef}
+        className="h-full w-full xl:aspect-video xl:h-min xl:w-[40%]"
+      >
         <BackgroundVideo
           src={getStarted}
           style={{
