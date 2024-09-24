@@ -1,7 +1,7 @@
 "use client";
 
 // fc
-import { FC } from "react";
+import { FC, CSSProperties } from "react";
 // useRef
 import { useRef } from "react";
 // next video
@@ -19,8 +19,8 @@ gsap.registerPlugin(ScrollTrigger);
 const Reel: FC = () => {
   // hooks
   // useRef
-  const containerRef = useRef(null);
-  const boxRef = useRef(null);
+  const containerRef = useRef<HTMLElement>(null);
+  const boxRef = useRef<HTMLDivElement>(null);
   // useGSAP
   useGSAP(() => {
     //
@@ -58,11 +58,13 @@ const Reel: FC = () => {
       >
         <BackgroundVideo
           src={getStarted}
-          style={{
-            aspectRatio: "auto",
-            width: "100%",
-            height: "100%",
-          }}
+          style={
+            {
+              aspectRatio: "auto",
+              width: "100%",
+              height: "100%",
+            } as CSSProperties
+          }
           disableTracking
           poster={images.videoPoster}
           blurDataURL={images.videoPoster.src}
