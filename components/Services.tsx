@@ -1,6 +1,11 @@
-import { FC } from 'react';
+// fc
+import { FC } from "react";
 const Services: FC = () => {
-  return <section></section>;
+  return (
+    <section className="h-screen bg-dark">
+      <h2 className="text-white">Services</h2>
+    </section>
+  );
 };
 
 export default Services;

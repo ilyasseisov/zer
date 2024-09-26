@@ -58,6 +58,44 @@
   }
   /* END 32px */
 
+  /* 36px */
+  .text-36px-capsized {
+    font-size: 36px;
+    line-height: 44.2px;
+  }
+
+  .text-36px-capsized::before {
+    content: "";
+    margin-bottom: -0.3533em;
+    display: table;
+  }
+
+  .text-36px-capsized::after {
+    content: "";
+    margin-top: -0.3133em;
+    display: table;
+  }
+  /* END 36px */
+
+  /* 48px */
+  .text-48px-capsized {
+    font-size: 48px;
+    line-height: 57.6px;
+  }
+
+  .text-48px-capsized::before {
+    content: "";
+    margin-bottom: -0.27em;
+    display: table;
+  }
+
+  .text-48px-capsized::after {
+    content: "";
+    margin-top: -0.23em;
+    display: table;
+  }
+  /* END 48px */
+
   /* 52px */
   .text-52px-capsized {
     font-size: 52px;
@@ -76,6 +114,25 @@
     display: table;
   }
   /* END 52px */
+
+  /* 64px */
+  .text-64px-capsized {
+    font-size: 64px;
+    line-height: 68.8px;
+  }
+
+  .text-64px-capsized::before {
+    content: "";
+    margin-bottom: -0.2075em;
+    display: table;
+  }
+
+  .text-64px-capsized::after {
+    content: "";
+    margin-top: -0.1675em;
+    display: table;
+  }
+  /* END 64px */
 
   /* sm */
   /* 80px */
@@ -101,7 +158,7 @@
   /* 96px */
   .text-96px-capsized {
     font-size: 96px;
-    line-height: 91.2px;
+    line-height: 98.2px;
   }
 
   .text-96px-capsized::before {
