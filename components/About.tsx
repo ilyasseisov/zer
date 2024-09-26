@@ -1,6 +1,31 @@
-import { FC } from 'react';
+"use client";
+
+// fc
+import { FC } from "react";
+// components
+import Paragraph from "./ui/Paragraph";
+
 const About: FC = () => {
-  return <section></section>;
+  // hooks
+
+  // local variables
+  // return
+  return (
+    <>
+      <section className="grid h-screen grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:px-0">
+        <div className="col-span-12 flex w-full flex-col items-start justify-center text-white md:col-span-10 xl:col-span-8">
+          <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-grey md:mb-16">
+            ABOUT US
+          </h3>
+          <Paragraph highlightWords={[2, 3]}>
+            We are creative agency focused on 2D & 3D graphics, web design &
+            development, modern motion design and digital marketing for any
+            niche
+          </Paragraph>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default About;
