@@ -37,7 +37,7 @@ const HoverLines: FC<HoverLinesProps> = ({ lines }) => {
             start: "top 80%",
             end: "center 20%",
             scrub: true,
-            markers: true,
+            // markers: true,
           },
         });
       });
