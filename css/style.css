@@ -8,7 +8,8 @@
   h5,
   h6,
   p,
-  span {
+  span,
+  div {
     cursor: default;
     -webkit-touch-callout: none;
     user-select: none;
@@ -67,7 +68,7 @@
   /* 48px */
   .text-48px-capsized {
     font-size: 48px;
-    line-height: 57.6px;
+    line-height: 60px;
   }
   .text-48px-capsized::before {
     content: "";
@@ -186,5 +187,86 @@
     mask-repeat: no-repeat;
     mask-size: 60px;
     @apply bg-purple-light;
+  }
+  [data-text] {
+    letter-spacing: -2px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to right, #ffffff, #ffffff) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 2.4%;
+  }
+  @media (min-width: 640px) {
+    [data-text] {
+      background-size: 1.8%;
+    }
+  }
+  @media (min-width: 768px) {
+    [data-text] {
+      background-size: 8%;
+    }
+  }
+  @media (min-width: 1280px) {
+    [data-text] {
+      background-size: 16.4%;
+    }
+  }
+  [data-text]:before {
+    content: "";
+    height: 100%;
+    background: transparent;
+    padding-left: 16px;
+  }
+  @media (min-width: 768px) {
+    [data-text]:before {
+      padding-left: 8.333333%;
+    }
+  }
+  @media (min-width: 1280px) {
+    [data-text]:before {
+      padding-left: 16.666666%;
+    }
+  }
+  [data-text] span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transform-origin: center;
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
+    padding-left: 16px;
+  }
+  @media (min-width: 768px) {
+    [data-text] span {
+      padding-left: 8.333333%;
+    }
+  }
+  @media (min-width: 1280px) {
+    [data-text] span {
+      padding-left: 16.666666%;
+    }
+  }
+  [data-text]:hover span {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  [data-text] .underline {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(140, 140, 140, 0.25);
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+  [data-text]:first-of-type .upperline {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(140, 140, 140, 0.25);
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
