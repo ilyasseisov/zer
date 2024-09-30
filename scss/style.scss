@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+// breakpoint
+$sm: 640px;
+$md: 768px;
+$xl: 1280px;
+
+// colors
+$grey: #8c8c8c;
+$white: #ffffff;
+
 @layer base {
   // prevent text selection
   h2,
@@ -10,7 +19,8 @@
   h5,
   h6,
   p,
-  span {
+  span,
+  div {
     cursor: default;
     -webkit-touch-callout: none;
     user-select: none;
@@ -80,7 +90,7 @@
   /* 48px */
   .text-48px-capsized {
     font-size: 48px;
-    line-height: 57.6px;
+    line-height: 60px;
   }
 
   .text-48px-capsized::before {
@@ -223,4 +233,104 @@
     @apply bg-purple-light;
   }
   //   END hero mask
+
+  // clip path for HoverLines
+  [data-text] {
+    //
+    letter-spacing: -2px;
+    position: relative;
+    display: flex;
+    width: 100%;
+
+    color: rgba($white, 0.2);
+    background: linear-gradient(to right, $white, $white) no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 2.4%;
+    //
+    @media (min-width: $sm) {
+      background-size: 1.8%;
+    }
+    //
+    @media (min-width: $md) {
+      background-size: 8%;
+    }
+    //
+    @media (min-width: $xl) {
+      background-size: 16.4%;
+    }
+    //
+
+    //
+    // to create offset
+    //
+    &:before {
+      content: "";
+      height: 100%;
+      background: transparent;
+      // offset
+      padding-left: 16px;
+      //
+      @media (min-width: $md) {
+        // 8.333333 = 100% / 12
+        padding-left: 8.333333%;
+      }
+      //
+      @media (min-width: $xl) {
+        // 16.666666 = 100% / 6
+        padding-left: 16.666666%;
+      }
+      //
+    }
+    //
+    span {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+      transform-origin: center;
+      clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+      transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
+      // to match offset
+      padding-left: 16px;
+      //
+      @media (min-width: $md) {
+        padding-left: 8.333333%;
+      }
+      //
+      @media (min-width: $xl) {
+        padding-left: 16.666666%;
+      }
+      //
+    }
+    //
+    &:hover {
+      span {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        //
+      }
+    }
+    //
+    .underline {
+      width: 100%;
+      height: 1px;
+      background-color: rgba($grey, 0.25);
+      position: absolute;
+      left: 0;
+      top: 100%;
+    }
+    //
+    &:first-of-type {
+      .upperline {
+        width: 100%;
+        height: 1px;
+        background-color: rgba($grey, 0.25);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    //
+  }
+  // END clip path for HoverLines
 }
