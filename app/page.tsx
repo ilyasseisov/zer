@@ -6,6 +6,7 @@ import Reel from "@/components/Reel";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Experience from "@/components/Experience";
+import Clients from "@/components/Clients";
 
 const Home: FC = () => {
   return (
@@ -15,6 +16,7 @@ const Home: FC = () => {
       <About />
       <Services />
       <Experience />
+      <Clients />
     </main>
   );
 };
