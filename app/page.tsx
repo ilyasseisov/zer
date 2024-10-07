@@ -9,6 +9,7 @@ import Experience from "@/components/Experience";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import Testimonials2 from "@/components/Testimonials2";
+import Help from "@/components/Help";
 
 const Home: FC = () => {
   return (
@@ -21,9 +22,7 @@ const Home: FC = () => {
       <Clients />
       {/* <Testimonials /> */}
       {/* <Testimonials2 /> */}
-      <div className="min-h-screen">
-        <h2 className="text-white">xxx</h2>
-      </div>
+      <Help />
     </main>
   );
 };
