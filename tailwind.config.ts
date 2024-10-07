@@ -22,6 +22,11 @@ const config: Config = {
       fontFamily: {
         stolzl: "var(--font-stolzl)",
       },
+      //
+      borderWidth: {
+        "1": "1px", // Custom class for 1px top and bottom border
+      },
+      //
     },
   },
   plugins: [],

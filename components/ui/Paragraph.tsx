@@ -8,6 +8,8 @@ import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 type ParagraphProps = {
   children: string;
   highlightWords?: number[];
+  quote?: boolean;
+  className?: string;
 };
 
 type WordProps = {
@@ -17,7 +19,12 @@ type WordProps = {
   isHighlighted: boolean;
 };
 
-const Paragraph: FC<ParagraphProps> = ({ children, highlightWords = [] }) => {
+const Paragraph: FC<ParagraphProps> = ({
+  children,
+  highlightWords = [],
+  quote,
+  className = "",
+}) => {
   // hooks
   const container = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({
@@ -31,8 +38,9 @@ const Paragraph: FC<ParagraphProps> = ({ children, highlightWords = [] }) => {
     //
     <>
       <p
+        data-paragraph
         ref={container}
-        className="text-36px-capsized md:text-64px-capsized xl:text-96px-capsized flex flex-wrap text-left font-stolzl font-medium text-white"
+        className={`${className} ${quote ? "quote" : ""} word-wrap text-36px-capsized md:text-64px-capsized xl:text-96px-capsized relative flex flex-wrap hyphens-auto text-left font-stolzl font-medium text-white`}
       >
         {words.map((word, i) => {
           // local variables
