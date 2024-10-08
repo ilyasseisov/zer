@@ -10,6 +10,7 @@ import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import Testimonials2 from "@/components/Testimonials2";
 import Help from "@/components/Help";
+import Footer from "@/components/Footer";
 
 const Home: FC = () => {
   return (
@@ -23,6 +24,7 @@ const Home: FC = () => {
       {/* <Testimonials /> */}
       {/* <Testimonials2 /> */}
       <Help />
+      <Footer />
     </main>
   );
 };
