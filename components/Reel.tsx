@@ -22,41 +22,44 @@ const Reel: FC = () => {
   const containerRef = useRef<HTMLElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
   // useGSAP
-  // useGSAP(() => {
-  //   //
-  //   const mm = gsap.matchMedia();
-  //   //
-  //   mm.add("(min-width: 1280px)", () => {
-  //     const tl = gsap.timeline().to(boxRef.current, { scale: 2 });
+  // useGSAP(
+  //   () => {
   //     //
-  //     ScrollTrigger.create({
-  //       trigger: containerRef.current,
-  //       animation: tl,
-  //       markers: true,
-  //       // when the TOP of the trigger hits the TOP of the viewport
-  //       start: "top top",
-  //       // when the BOTTOM of the trigger hits the TOP of the viewport
-  //       end: "bottom top",
-  //       scrub: 1,
-  //       pin: true,
+  //     const mm = gsap.matchMedia();
+  //     //
+  //     mm.add("(min-width: 1280px)", () => {
+  //       const tl = gsap.timeline().to(boxRef.current, { scale: 2 });
+  //       //
+  //       ScrollTrigger.create({
+  //         trigger: containerRef.current,
+  //         animation: tl,
+  //         markers: true,
+  //         // when the TOP of the trigger hits the TOP of the viewport
+  //         start: "top top",
+  //         // when the BOTTOM of the trigger hits the TOP of the viewport
+  //         end: "bottom top",
+  //         scrub: 1,
+  //         pin: true,
+  //       });
   //     });
-  //   });
-  //   //
+  //     //
 
-  //   //
-  // });
+  //     //
+  //   },
+  //   { scope: containerRef },
+  // );
   //
   // return
   return (
     <section
       ref={containerRef}
-      className="flex h-screen items-center justify-center overflow-hidden bg-dark"
+      className="flex min-h-screen items-center justify-center overflow-hidden bg-dark"
     >
-      <div
+      {/* <div
         ref={boxRef}
         className="h-full w-full xl:aspect-video xl:h-min xl:w-[40%]"
       >
-        {/* <BackgroundVideo
+        <BackgroundVideo
           src={getStarted}
           style={
             {
@@ -68,8 +71,8 @@ const Reel: FC = () => {
           disableTracking
           poster={images.videoPoster}
           blurDataURL={images.videoPoster.src}
-        /> */}
-      </div>
+        />
+      </div> */}
     </section>
   );
 };
