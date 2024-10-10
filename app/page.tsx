@@ -8,7 +8,6 @@ import Services from "@/components/Services";
 import Experience from "@/components/Experience";
 import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
-import Testimonials2 from "@/components/Testimonials2";
 import Help from "@/components/Help";
 import Footer from "@/components/Footer";
 
@@ -21,8 +20,7 @@ const Home: FC = () => {
       <Services />
       <Experience />
       <Clients />
-      {/* <Testimonials /> */}
-      {/* <Testimonials2 /> */}
+      <Testimonials />
       <Help />
       <Footer />
     </main>
