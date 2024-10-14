@@ -8,6 +8,10 @@ import person1 from "./person1.jpg";
 import person2 from "./person2.jpg";
 import person3 from "./person3.jpg";
 import quote from "./quote.svg";
+import blog from "./blog.svg";
+import dribbble from "./dribbble.svg";
+import insta from "./insta.svg";
+import linkedin from "./linkedin.svg";
 
 //export
 const images = {
@@ -20,6 +24,10 @@ const images = {
   person2,
   person3,
   quote,
+  blog,
+  dribbble,
+  insta,
+  linkedin,
 };
 
 export default images;
