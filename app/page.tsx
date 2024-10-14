@@ -11,6 +11,7 @@ import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import Help from "@/components/Help";
 import Footer from "@/components/Footer";
+import SocialIcons from "@/components/ui/SocialIcons";
 
 const Home: FC = () => {
   return (
@@ -25,6 +26,7 @@ const Home: FC = () => {
       <Testimonials />
       <Help />
       <Footer />
+      <SocialIcons />
     </main>
   );
 };
