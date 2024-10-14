@@ -1,6 +1,7 @@
 // FC
 import { FC } from "react";
 // components
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Reel from "@/components/Reel";
 import About from "@/components/About";
@@ -14,6 +15,7 @@ import Footer from "@/components/Footer";
 const Home: FC = () => {
   return (
     <main className="container w-full max-w-none">
+      <Header />
       <Hero />
       <Reel />
       <About />

@@ -1,4 +1,5 @@
 // file import
+import logo from "./logo.svg";
 import star from "./star.svg";
 import starSoft from "./starSoft.svg";
 import maksCircle from "./maksCircle.svg";
@@ -10,6 +11,7 @@ import quote from "./quote.svg";
 
 //export
 const images = {
+  logo,
   star,
   starSoft,
   maksCircle,
