@@ -9,7 +9,10 @@ type ParagraphProps = {
   children: string;
   highlightWords?: number[];
   quote?: boolean;
+  quoteDark?: boolean;
+  textDark?: boolean;
   className?: string;
+  setIsHovered?: (value: boolean) => void;
 };
 
 type WordProps = {
@@ -23,7 +26,10 @@ const Paragraph: FC<ParagraphProps> = ({
   children,
   highlightWords = [],
   quote,
+  quoteDark,
+  textDark,
   className = "",
+  setIsHovered,
 }) => {
   // hooks
   const container = useRef<HTMLParagraphElement>(null);
@@ -40,7 +46,17 @@ const Paragraph: FC<ParagraphProps> = ({
       <p
         data-paragraph
         ref={container}
-        className={`${className} ${quote ? "quote" : ""} word-wrap text-36px-capsized md:text-64px-capsized xl:text-96px-capsized relative flex flex-wrap hyphens-auto text-left font-stolzl font-medium text-white`}
+        className={`${className} ${quote ? "quote" : ""} ${quoteDark ? "quoteDark" : ""} ${textDark ? "text-dark" : "text-white"} word-wrap text-36px-capsized md:text-64px-capsized xl:text-96px-capsized relative flex flex-wrap hyphens-auto text-left font-stolzl font-medium`}
+        onMouseEnter={() => {
+          if (setIsHovered) {
+            setIsHovered(true);
+          }
+        }}
+        onMouseLeave={() => {
+          if (setIsHovered) {
+            setIsHovered(false);
+          }
+        }}
       >
         {words.map((word, i) => {
           // local variables

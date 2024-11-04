@@ -8,13 +8,13 @@ type mouseCoordinates = {
   y: number | null;
 };
 
-const useMousePosition = (): mouseCoordinates & { scrollY: number } => {
+const useMousePosition = (): mouseCoordinates & { scrollY: number | null } => {
   // hooks
   const [mousePosition, setMousePosition] = useState<mouseCoordinates>({
     x: null,
     y: null,
   });
-  const [scrollY, setScrollY] = useState<number>(0);
+  const [scrollY, setScrollY] = useState<number | null>(null);
 
   const updateMousePosition = (e: MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });

@@ -15,10 +15,12 @@ type Text = {
 };
 type HoverLinesProps = {
   lines: Text[];
+  setIsHoveredSize0: (value: boolean) => void;
 };
+
 // register plugin
 gsap.registerPlugin(ScrollTrigger);
-const HoverLines: FC<HoverLinesProps> = ({ lines }) => {
+const HoverLines: FC<HoverLinesProps> = ({ lines, setIsHoveredSize0 }) => {
   // hooks
   // useRef
   const containerRef = useRef<HTMLDivElement>(null);
@@ -48,9 +50,14 @@ const HoverLines: FC<HoverLinesProps> = ({ lines }) => {
   // return
   return (
     <>
-      <div ref={containerRef} className="flex w-full flex-col items-start">
+      <div
+        ref={containerRef}
+        className="relative z-[10001] flex w-full flex-col items-start"
+      >
         {lines.map((line, index) => (
           <div
+            onMouseEnter={() => setIsHoveredSize0(true)}
+            onMouseLeave={() => setIsHoveredSize0(false)}
             data-text
             key={index}
             className="text-48px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized font-stolzl font-bold"

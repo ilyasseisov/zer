@@ -2,7 +2,11 @@
 import { FC } from "react";
 // components
 import HoverLines from "./ui/HoverLines";
-const Clients: FC = () => {
+// types
+type HoverProps = {
+  setIsHoveredSize0: (value: boolean) => void;
+};
+const Clients: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
   return (
     <section className="grid min-h-screen grid-cols-[repeat(auto-fit,_8.333333%)] justify-center md:px-0">
       <div className="col-span-12 flex w-full flex-col items-start justify-center text-white">
@@ -11,6 +15,7 @@ const Clients: FC = () => {
         </h3>
         {/* lines */}
         <HoverLines
+          setIsHoveredSize0={setIsHoveredSize0}
           lines={[
             { text: "ARCHALYK", hover: "WATER" },
             { text: "HASAR", hover: "CANDIES" },

@@ -14,9 +14,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Paragraph from "./ui/Paragraph";
 // images
 import images from "../public/img";
+// types
+type HoverProps = {
+  setIsHoveredSize0: (value: boolean) => void;
+};
 // register plugin
 gsap.registerPlugin(ScrollTrigger);
-const Testimonials: FC = () => {
+const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
   // hooks
   // useRef
   const containerRef = useRef<HTMLDivElement>(null);
@@ -121,7 +125,11 @@ const Testimonials: FC = () => {
             </div>
           </div>
           {/* avatars */}
-          <div className="avatars col-span-3 flex h-[100vh] flex-col items-end justify-center">
+          <div
+            onMouseEnter={() => setIsHoveredSize0(true)}
+            onMouseLeave={() => setIsHoveredSize0(false)}
+            className="avatars relative z-[10001] col-span-3 flex h-[100vh] flex-col items-end justify-center"
+          >
             <div className="relative flex h-[234px] w-[64px] flex-col items-end justify-center gap-y-5 md:h-[328px] md:w-[96px] xl:h-[402px] xl:w-[120px]">
               <div className="avatar h-[64px] w-[64px] md:h-[96px] md:w-[96px] xl:h-[120px] xl:w-[120px]">
                 <Image

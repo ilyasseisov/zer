@@ -343,6 +343,33 @@
       top: -100px;
     }
   }
+  .quoteDark::before {
+    content: "";
+    width: 50px;
+    height: 36.5px;
+    position: absolute;
+    left: 0px;
+    top: -60px;
+    background-image: url("../public/img/quoteDark.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: 768px) {
+    .quoteDark::before {
+      width: 75px;
+      height: 54.75px;
+      left: -52px;
+      top: -80px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .quoteDark::before {
+      width: 100px;
+      height: 73px;
+      left: -100px;
+      top: -100px;
+    }
+  }
   .word-wrap {
     word-wrap: break-word;
     overflow-wrap: break-word;

@@ -21,7 +21,7 @@ const Reel: FC = () => {
   // useRef
   const containerRef = useRef<HTMLElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
-  // useGSAP
+  // // useGSAP
   // useGSAP(
   //   () => {
   //     //
@@ -48,14 +48,14 @@ const Reel: FC = () => {
   //   },
   //   { scope: containerRef },
   // );
-  //
+  // //
   // return
   return (
     <section
       ref={containerRef}
       className="flex min-h-screen items-center justify-center overflow-hidden bg-dark"
     >
-      {/* <div
+      <div
         ref={boxRef}
         className="h-full w-full xl:aspect-video xl:h-min xl:w-[40%]"
       >
@@ -72,7 +72,7 @@ const Reel: FC = () => {
           poster={images.videoPoster}
           blurDataURL={images.videoPoster.src}
         />
-      </div> */}
+      </div>
     </section>
   );
 };

@@ -9,7 +9,6 @@ const Help: FC = () => {
   // return
   return (
     <section className="h-screen bg-dark">
-      {/* body */}
       <div className="flex h-full w-full flex-col items-center justify-center">
         <h3 className="text-20px-capsized md:text-32px-capsized mb-8 text-center font-stolzl font-normal text-grey md:mb-16">
           WE ARE HERE FOR YOU
@@ -33,7 +32,6 @@ const Help: FC = () => {
         </h2>
         <HireUsButton bgColor="bg-purple-dark" />
       </div>
-      {/* END body */}
     </section>
   );
 };
