@@ -56,13 +56,16 @@ const HoverLines: FC<HoverLinesProps> = ({ lines, setIsHoveredSize0 }) => {
       >
         {lines.map((line, index) => (
           <div
-            onMouseEnter={() => setIsHoveredSize0(true)}
-            onMouseLeave={() => setIsHoveredSize0(false)}
             data-text
             key={index}
             className="text-48px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized font-stolzl font-bold"
           >
-            {line.text}
+            <p
+              onMouseEnter={() => setIsHoveredSize0(true)}
+              onMouseLeave={() => setIsHoveredSize0(false)}
+            >
+              {line.text}
+            </p>
             <span className="bg-purple-light text-dark">{line.hover}</span>
             <div className="underline"></div>
             <div className="upperline"></div>

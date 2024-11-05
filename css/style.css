@@ -285,6 +285,7 @@
     transform-origin: center;
     clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
+    pointer-events: none;
     padding-left: 16px;
   }
   @media (min-width: 768px) {
@@ -297,7 +298,7 @@
       padding-left: 16.666666%;
     }
   }
-  [data-text]:hover span {
+  [data-text] p:hover + span {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
   [data-text] .underline {
