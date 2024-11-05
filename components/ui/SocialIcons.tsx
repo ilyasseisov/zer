@@ -11,7 +11,7 @@ const SocialIcons: FC = () => {
   // return
   return (
     <>
-      <aside className="fixed bottom-12 left-8 hidden flex-col gap-y-10 xl:bottom-16 xl:left-16 xl:flex">
+      <aside className="fixed bottom-12 left-8 z-[10001] hidden flex-col gap-y-10 xl:bottom-16 xl:left-16 xl:flex">
         <a target="_blank" rel="noreferrer">
           <Image src={images.dribbble} alt="dribbble" width={40} height={40} />
         </a>

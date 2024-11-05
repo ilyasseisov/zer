@@ -268,7 +268,7 @@ const Home: FC = () => {
       {/* END mask */}
 
       {/* body */}
-      {/* <Header /> */}
+      <Header />
       <Hero />
       <Reel />
       <About />
@@ -278,7 +278,7 @@ const Home: FC = () => {
       <Testimonials setIsHoveredSize0={setIsHoveredSize0} />
       <Help />
       <Footer setIsHoveredSize0={setIsHoveredSize0} />
-      {/* <SocialIcons /> */}
+      <SocialIcons />
       {/* END body */}
     </main>
   );
