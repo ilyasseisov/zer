@@ -23,8 +23,7 @@ import SocialIcons from "@/components/ui/SocialIcons";
 import HireUsButton from "@/components/ui/HireUsButton";
 import Paragraph from "@/components/ui/Paragraph";
 //
-//
-import HoverElement from "@/components/ui/HoverElement";
+
 //
 const Home: FC = () => {
   // hooks
