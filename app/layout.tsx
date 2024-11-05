@@ -11,7 +11,8 @@ import "../css/style.css";
 ////
 export const metadata: Metadata = {
   title: "ZER Design",
-  description: "Creative and marketing agency",
+  description:
+    "Creative and marketing agency. We help turn your ideas into reality.",
 };
 
 type RootLayoutProps = Readonly<{
