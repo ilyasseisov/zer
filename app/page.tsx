@@ -19,6 +19,7 @@ import Clients from "@/components/Clients";
 import Testimonials from "@/components/Testimonials";
 import Help from "@/components/Help";
 import Footer from "@/components/Footer";
+import ShadeTopBottom from "@/components/misc/ShadeTopBottom";
 import SocialIcons from "@/components/ui/SocialIcons";
 import HireUsButton from "@/components/ui/HireUsButton";
 import Paragraph from "@/components/ui/Paragraph";
@@ -255,7 +256,7 @@ const Home: FC = () => {
         {/* END help */}
 
         {/* footer */}
-        <section className="mb-16 grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:mb-24 md:px-0 xl:mb-32">
+        <section className="mb-40 grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:mb-48 md:px-0 xl:mb-32">
           <div className="col-span-12 flex w-full flex-col items-start justify-center md:col-span-10 xl:col-span-8">
             <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-dark md:mb-16">
               CONNECT
@@ -278,6 +279,7 @@ const Home: FC = () => {
       <Help />
       <Footer setIsHoveredSize0={setIsHoveredSize0} />
       <SocialIcons />
+      <ShadeTopBottom />
       {/* END body */}
     </main>
   );

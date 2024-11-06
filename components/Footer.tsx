@@ -8,7 +8,7 @@ type HoverProps = {
 };
 const Footer: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
   return (
-    <section className="mb-16 grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:mb-24 md:px-0 xl:mb-32">
+    <section className="mb-40 grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:mb-48 md:px-0 xl:mb-32">
       <div className="col-span-12 flex w-full flex-col items-start justify-center text-white md:col-span-10 xl:col-span-8">
         <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-grey md:mb-16">
           CONNECT
