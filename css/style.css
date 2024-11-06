@@ -506,4 +506,35 @@
       height: 31.999992px;
     }
   }
+  .shade {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10002;
+    pointer-events: none;
+    user-select: none;
+  }
+  .shade::before {
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(1turn, hsla(0, 0%, 5%, 0), #0c0c0c 92.91%);
+    height: 192px;
+    top: 0;
+  }
+  .shade::after {
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(0deg, #0c0c0c 31.25%, hsla(0, 0%, 5%, 0) 92.91%);
+    bottom: 0;
+    height: 192px;
+  }
 }
