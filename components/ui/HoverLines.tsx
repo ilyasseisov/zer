@@ -51,14 +51,6 @@ const HoverLines: FC<HoverLinesProps> = ({ lines, setIsHoveredSize0 }) => {
   // return
   return (
     <>
-      <svg width="0" height="0">
-        <defs>
-          <mask id="text-mask" x="0" y="0" width="100%" height="100%">
-            <rect x="0" y="0" width="100%" height="100%" fill="white" />
-          </mask>
-        </defs>
-      </svg>
-
       <div
         ref={containerRef}
         className="relative z-[10001] flex w-full flex-col items-start"
