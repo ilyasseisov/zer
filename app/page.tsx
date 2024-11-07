@@ -131,6 +131,8 @@ const Home: FC = () => {
                 >
                   <p>&nbsp;</p>
                   <span></span>
+                  <div className="!bg-dark underline"></div>
+                  <div className="upperline !bg-dark"></div>
                 </div>
               ))}
           </div>
@@ -178,6 +180,8 @@ const Home: FC = () => {
                 >
                   <p>&nbsp;</p>
                   <span></span>
+                  <div className="!bg-dark underline"></div>
+                  <div className="upperline !bg-dark"></div>
                 </div>
               ))}
           </div>
