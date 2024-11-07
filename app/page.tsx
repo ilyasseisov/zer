@@ -24,7 +24,7 @@ import SocialIcons from "@/components/ui/SocialIcons";
 import HireUsButton from "@/components/ui/HireUsButton";
 import Paragraph from "@/components/ui/Paragraph";
 //
-
+import HoverLines from "@/components/ui/HoverLines";
 //
 const Home: FC = () => {
   // hooks
@@ -115,7 +115,26 @@ const Home: FC = () => {
         {/* END about */}
 
         {/* services */}
-        <section className="min-h-screen"></section>
+        <section className="grid min-h-screen grid-cols-[repeat(auto-fit,_8.333333%)] justify-center md:px-0">
+          <div className="col-span-12 flex w-full flex-col items-start justify-center">
+            <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full pl-4 font-stolzl font-normal text-dark md:mb-16 md:pl-[8.333333%] xl:pl-[16.666666%]">
+              WHAT WE DO
+            </h3>
+            {/* lines */}
+            {Array(5)
+              .fill("")
+              .map((line, index) => (
+                <div
+                  data-text
+                  key={index}
+                  className="text-48px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized font-stolzl font-bold"
+                >
+                  <p>&nbsp;</p>
+                  <span></span>
+                </div>
+              ))}
+          </div>
+        </section>
         {/* END services */}
 
         {/* experience */}
@@ -143,7 +162,26 @@ const Home: FC = () => {
         {/* END experience */}
 
         {/* clients */}
-        <section className="min-h-screen"></section>
+        <section className="grid min-h-screen grid-cols-[repeat(auto-fit,_8.333333%)] justify-center md:px-0">
+          <div className="col-span-12 flex w-full flex-col items-start justify-center">
+            <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full pl-4 font-stolzl font-normal text-dark md:mb-16 md:pl-[8.333333%] xl:pl-[16.666666%]">
+              CLIENTS
+            </h3>
+            {/* lines */}
+            {Array(5)
+              .fill("")
+              .map((line, index) => (
+                <div
+                  data-text
+                  key={index}
+                  className="text-48px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized font-stolzl font-bold"
+                >
+                  <p>&nbsp;</p>
+                  <span></span>
+                </div>
+              ))}
+          </div>
+        </section>
         {/* END clients */}
 
         {/* testimonials */}
@@ -269,6 +307,7 @@ const Home: FC = () => {
 
       {/* body */}
       <Header />
+      {/*  */}
       <Hero />
       <Reel />
       <About />
@@ -278,6 +317,7 @@ const Home: FC = () => {
       <Testimonials setIsHoveredSize0={setIsHoveredSize0} />
       <Help />
       <Footer setIsHoveredSize0={setIsHoveredSize0} />
+      {/*  */}
       <SocialIcons />
       <ShadeTopBottom />
       {/* END body */}
