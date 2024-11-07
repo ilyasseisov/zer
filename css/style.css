@@ -242,24 +242,29 @@
     display: flex;
     width: 100%;
     color: rgba(255, 255, 255, 0.2);
-    background: linear-gradient(to right, #ffffff, #ffffff) no-repeat;
-    -webkit-background-clip: text;
+    background: linear-gradient(to right, white, white) no-repeat;
+    background: -webkit-linear-gradient(to right, white, white) no-repeat;
     background-clip: text;
+    -webkit-background-clip: text;
     background-size: 2.4%;
+    -webkit-background-size: 2.4%;
   }
   @media (min-width: 640px) {
     [data-text] {
       background-size: 1.8%;
+      -webkit-background-size: 1.8%;
     }
   }
   @media (min-width: 768px) {
     [data-text] {
       background-size: 8%;
+      -webkit-background-size: 8%;
     }
   }
   @media (min-width: 1280px) {
     [data-text] {
       background-size: 16.4%;
+      -webkit-background-size: 16.4%;
     }
   }
   [data-text]:before {

@@ -300,21 +300,26 @@ $white: #ffffff;
     width: 100%;
 
     color: rgba($white, 0.2);
-    background: linear-gradient(to right, $white, $white) no-repeat;
-    -webkit-background-clip: text;
+    background: linear-gradient(to right, white, white) no-repeat;
+    background: -webkit-linear-gradient(to right, white, white) no-repeat;
     background-clip: text;
+    -webkit-background-clip: text;
     background-size: 2.4%;
+    -webkit-background-size: 2.4%;
     //
     @media (min-width: $sm) {
       background-size: 1.8%;
+      -webkit-background-size: 1.8%;
     }
-    //
+    // //
     @media (min-width: $md) {
       background-size: 8%;
+      -webkit-background-size: 8%;
     }
-    //
+    // //
     @media (min-width: $xl) {
       background-size: 16.4%;
+      -webkit-background-size: 16.4%;
     }
     //
 
