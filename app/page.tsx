@@ -294,7 +294,7 @@ const Home: FC = () => {
         {/* END help */}
 
         {/* footer */}
-        <section className="mb-40 grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:mb-48 md:px-0 xl:mb-32">
+        <section className="mb-[720px] grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:mb-[400px] md:px-0 xl:mb-[400px]">
           <div className="col-span-12 flex w-full flex-col items-start justify-center md:col-span-10 xl:col-span-8">
             <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-dark md:mb-16">
               CONNECT
