@@ -132,7 +132,7 @@
   /* 52px */
   .text-52px-capsized {
     font-size: 52px;
-    line-height: 60.4px;
+    line-height: 66px;
   }
   .text-52px-capsized::before {
     content: "";
@@ -165,7 +165,7 @@
   /* 80px */
   .text-80px-capsized {
     font-size: 80px;
-    line-height: 80px;
+    line-height: 86px;
   }
   .text-80px-capsized::before {
     content: "";
@@ -199,7 +199,7 @@
   /* 120px */
   .text-120px-capsized {
     font-size: 120px;
-    line-height: 108px;
+    line-height: 114px;
   }
   .text-120px-capsized::before {
     content: "";
@@ -216,7 +216,7 @@
   /* 160px */
   .text-160px-capsized {
     font-size: 160px;
-    line-height: 136px;
+    line-height: 144px;
   }
   .text-160px-capsized::before {
     content: "";
@@ -541,5 +541,11 @@
     background: linear-gradient(0deg, #0c0c0c 31.25%, hsla(0, 0%, 5%, 0) 92.91%);
     bottom: 0;
     height: 192px;
+  }
+  #hero [data-word-container] {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  #hero [data-word-container] [data-word] {
+    position: relative;
   }
 }
