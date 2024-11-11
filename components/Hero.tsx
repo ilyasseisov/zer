@@ -40,9 +40,14 @@ const Hero: FC = () => {
         ref={containerRef}
         className="flex h-full w-full flex-col items-center justify-center"
       >
-        <h3 className="text-20px-capsized md:text-32px-capsized mb-8 text-center font-stolzl font-normal text-grey md:mb-16">
-          ZER DESIGN
-        </h3>
+        <div data-word-container>
+          <h3
+            data-word
+            className="text-20px-capsized md:text-32px-capsized mb-8 text-center font-stolzl font-normal text-grey md:mb-16"
+          >
+            ZER DESIGN
+          </h3>
+        </div>
         <h2 className="mb-16 flex flex-col gap-y-4">
           <div data-word-container>
             <span
@@ -85,7 +90,11 @@ const Hero: FC = () => {
             </span>
           </div>
         </h2>
-        <HireUsButton bgColor="bg-purple-dark" />
+        <div data-word-container>
+          <div data-word>
+            <HireUsButton bgColor="bg-purple-dark" />
+          </div>
+        </div>
       </div>
     </section>
   );
