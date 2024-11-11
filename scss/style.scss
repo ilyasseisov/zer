@@ -166,7 +166,7 @@ $white: #ffffff;
   /* 52px */
   .text-52px-capsized {
     font-size: 52px;
-    line-height: 60.4px;
+    line-height: 66px;
   }
 
   .text-52px-capsized::before {
@@ -205,7 +205,7 @@ $white: #ffffff;
   /* 80px */
   .text-80px-capsized {
     font-size: 80px;
-    line-height: 80px;
+    line-height: 86px;
   }
 
   .text-80px-capsized::before {
@@ -245,7 +245,7 @@ $white: #ffffff;
   /* 120px */
   .text-120px-capsized {
     font-size: 120px;
-    line-height: 108px;
+    line-height: 114px;
   }
 
   .text-120px-capsized::before {
@@ -265,7 +265,7 @@ $white: #ffffff;
   /* 160px */
   .text-160px-capsized {
     font-size: 160px;
-    line-height: 136px;
+    line-height: 144px;
   }
 
   .text-160px-capsized::before {
@@ -677,4 +677,19 @@ $white: #ffffff;
     //
   }
   // END shade top & bottom [mobile and tablet]
+
+  #hero {
+    //
+    [data-word-container] {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      //
+      [data-word] {
+        position: relative;
+      }
+      //
+    }
+    //
+
+    //
+  }
 }
