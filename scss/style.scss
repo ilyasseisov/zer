@@ -33,7 +33,7 @@ $white: #ffffff;
   /* 20px */
   .text-20px-capsized {
     font-size: 20px;
-    line-height: 38px;
+    line-height: 40px;
   }
 
   .text-20px-capsized::before {
@@ -90,7 +90,7 @@ $white: #ffffff;
   /* 32px */
   .text-32px-capsized {
     font-size: 32px;
-    line-height: 46.4px;
+    line-height: 49.2px;
   }
 
   .text-32px-capsized::before {
@@ -678,10 +678,12 @@ $white: #ffffff;
   }
   // END shade top & bottom [mobile and tablet]
 
-  #hero {
+  #hero,
+  #help {
     //
     [data-word-container] {
       clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      // border: 2px solid salmon;
       //
       [data-word] {
         position: relative;
