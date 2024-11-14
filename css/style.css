@@ -551,4 +551,37 @@
   #help [data-word-container] [data-word] {
     position: relative;
   }
+  #preloader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10004;
+  }
+  #preloader p {
+    position: relative;
+  }
+  #preloader p::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(calc(-50% + 5.5px));
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+  }
+  @media (min-width: 768px) {
+    #preloader p::before {
+      transform: translateY(calc(-50% + 6.5px));
+    }
+  }
+  @media (min-width: 1280px) {
+    #preloader p::before {
+      transform: translateY(calc(-50% + 5px));
+    }
+  }
 }

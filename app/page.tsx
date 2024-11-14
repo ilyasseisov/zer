@@ -4,11 +4,15 @@
 import { FC } from "react";
 // framer motion
 import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 // custom hook
 import useMousePosition from "@/utils/useMousePosition";
+import useResourceLoading from "@/utils/useResourceLoading";
 // useState
 import { useState } from "react";
+
 // components
+import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Reel from "@/components/Reel";
@@ -30,6 +34,9 @@ const Home: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isHoveredSize0, setIsHoveredSize0] = useState(false);
   const { x, y, scrollY } = useMousePosition();
+
+  const isLoading = useResourceLoading();
+
   // local variables
   const size = isHoveredSize0 ? 0 : isHovered ? 600 : 60;
   // return
@@ -309,9 +316,13 @@ const Home: FC = () => {
       {/* END mask */}
 
       {/* body */}
-      <Header />
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
       {/*  */}
-      <Hero />
+      <Header isLoading={isLoading} />
+      {/*  */}
+      <Hero isLoading={isLoading} />
       <Reel />
       <About />
       <Services setIsHoveredSize0={setIsHoveredSize0} />
@@ -321,7 +332,7 @@ const Home: FC = () => {
       <Help />
       <Footer setIsHoveredSize0={setIsHoveredSize0} />
       {/*  */}
-      <SocialIcons />
+      <SocialIcons isLoading={isLoading} />
       <ShadeTopBottom />
       {/* END body */}
     </main>

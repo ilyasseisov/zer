@@ -6,11 +6,18 @@ import { FC } from "react";
 import HireUsButton from "./ui/HireUsButton";
 // useRef
 import { useRef } from "react";
+// useEffect
+import { useEffect } from "react";
 // gsap
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const Hero: FC = () => {
+// types
+type HeroProps = {
+  isLoading: boolean;
+};
+
+const Hero: FC<HeroProps> = ({ isLoading }) => {
   // hooks
   // useRef
   const containerRef = useRef<HTMLDivElement>(null);
@@ -21,17 +28,24 @@ const Hero: FC = () => {
       //
       gsap.set("[data-word]", { y: 120 });
 
-      tl.current = gsap.timeline({ paused: false }).to("[data-word]", {
+      tl.current = gsap.timeline({ paused: true }).to("[data-word]", {
         y: 0,
         duration: 1,
         stagger: 0.05,
         ease: "sine.inOut",
-        // delay: -0.75,
+        delay: 1,
       });
       //
     },
     { scope: containerRef },
   );
+
+  // useEffect
+  useEffect(() => {
+    if (!isLoading) {
+      tl.current?.play();
+    }
+  }, [isLoading]);
   // local variables
   // return
   return (
