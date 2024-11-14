@@ -682,12 +682,12 @@ $white: #ffffff;
   }
   // END shade top & bottom [mobile and tablet]
 
+  // words animation
   #hero,
   #help {
     //
     [data-word-container] {
       clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-      // border: 2px solid salmon;
       //
       [data-word] {
         position: relative;
@@ -698,4 +698,44 @@ $white: #ffffff;
 
     //
   }
+  // END words animation
+
+  // preloader
+  #preloader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10004;
+    //
+    p {
+      position: relative;
+      //
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(calc(-50% + 5.5px));
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: white;
+        //
+        @media (min-width: $md) {
+          transform: translateY(calc(-50% + 6.5px));
+        }
+        //
+        @media (min-width: $xl) {
+          transform: translateY(calc(-50% + 5px));
+        }
+        //
+      }
+      //
+    }
+    //
+  }
+  // END preloader
 }
