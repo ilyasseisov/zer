@@ -33,7 +33,7 @@ const Hero: FC<HeroProps> = ({ isLoading }) => {
         duration: 1,
         stagger: 0.05,
         ease: "sine.inOut",
-        delay: 1,
+        delay: 0.5,
       });
       //
     },
