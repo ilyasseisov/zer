@@ -5,7 +5,7 @@ import { FC } from "react";
 // framer motion
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
-// custom hook
+// custom hooks
 import useMousePosition from "@/utils/useMousePosition";
 import useResourceLoading from "@/utils/useResourceLoading";
 // useState
@@ -93,7 +93,7 @@ const Home: FC = () => {
         {/* END hero */}
 
         {/* reel */}
-        <section className="h-screen w-full bg-purple-light"></section>
+        <section className="h-[200vh] w-full bg-purple-light"></section>
         {/* END reel */}
 
         {/* about */}
@@ -110,11 +110,11 @@ const Home: FC = () => {
               <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-dark md:mb-16">
                 ABOUT US
               </h3>
-              <p className="word-wrap text-36px-capsized md:text-64px-capsized xl:text-96px-capsized relative flex flex-wrap hyphens-auto text-left font-stolzl font-medium text-dark">
-                We do 2D & 3D graphics because, everyone does it. We build
-                websites like it’s rocket science (but totally isn’t). And
-                pretend to know marketing
-              </p>
+              <Paragraph textDark>
+                We are creative agency focused on 2D & 3D graphics, web design &
+                development, modern motion design and digital marketing for any
+                niche
+              </Paragraph>
             </div>
           </div>
         </section>
@@ -159,11 +159,11 @@ const Home: FC = () => {
               <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-dark md:mb-16">
                 EXPERIENCE
               </h3>
-              <p className="word-wrap text-36px-capsized md:text-64px-capsized xl:text-96px-capsized relative flex flex-wrap hyphens-auto text-left font-stolzl font-medium text-dark">
-                We Photoshop stock images and Freepik vectors. Build websites
-                with ChatGPT. All our employees graduated from YouTube
-                university
-              </p>
+              <Paragraph textDark>
+                Over a five years of experience in 2D & 3D design, web dev and
+                digital marketing. Working with some of the most talented people
+                in the business
+              </Paragraph>
             </div>
           </div>
         </section>
@@ -210,7 +210,7 @@ const Home: FC = () => {
                     className="mb-10 md:mb-16 xl:mb-24"
                     setIsHovered={setIsHovered}
                   >
-                    I am his old friend. He made say nice things about him.
+                    High level creativity and professionalism. Highly recommend!
                   </Paragraph>
                   {/* signature */}
                   <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
@@ -229,8 +229,7 @@ const Home: FC = () => {
                     className="mb-10 md:mb-16 xl:mb-24"
                     setIsHovered={setIsHovered}
                   >
-                    They finally make it work after countless rounds of
-                    feedback.
+                    Innovative designs delivered on time, every time!
                   </Paragraph>
                   {/* signature */}
                   <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
@@ -249,7 +248,7 @@ const Home: FC = () => {
                     className="mb-10 md:mb-16 xl:mb-24"
                     setIsHovered={setIsHovered}
                   >
-                    I waited three months my photos to be cropped.
+                    Great attention to detail, fantastic collaborative team!
                   </Paragraph>
                   {/* signature */}
                   <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
@@ -304,7 +303,7 @@ const Home: FC = () => {
         {/* END help */}
 
         {/* footer */}
-        <section className="mb-[720px] grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:mb-[400px] md:px-0 xl:mb-[400px]">
+        <section className="mb-[720px] grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:mb-[400px] md:px-0 xl:mb-[480px]">
           <div className="col-span-12 flex w-full flex-col items-start justify-center md:col-span-10 xl:col-span-8">
             <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-dark md:mb-16">
               CONNECT

@@ -22,32 +22,32 @@ const Reel: FC = () => {
   const containerRef = useRef<HTMLElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
   // // useGSAP
-  // useGSAP(
-  //   () => {
-  //     //
-  //     const mm = gsap.matchMedia();
-  //     //
-  //     mm.add("(min-width: 1280px)", () => {
-  //       const tl = gsap.timeline().to(boxRef.current, { scale: 2 });
-  //       //
-  //       ScrollTrigger.create({
-  //         trigger: containerRef.current,
-  //         animation: tl,
-  //         markers: true,
-  //         // when the TOP of the trigger hits the TOP of the viewport
-  //         start: "top top",
-  //         // when the BOTTOM of the trigger hits the TOP of the viewport
-  //         end: "bottom top",
-  //         scrub: 1,
-  //         pin: true,
-  //       });
-  //     });
-  //     //
+  useGSAP(
+    () => {
+      //
+      const mm = gsap.matchMedia();
+      //
+      mm.add("(min-width: 1280px)", () => {
+        const tl = gsap.timeline().to(boxRef.current, { scale: 2 });
+        //
+        ScrollTrigger.create({
+          trigger: containerRef.current,
+          animation: tl,
+          markers: true,
+          // when the TOP of the trigger hits the TOP of the viewport
+          start: "top top",
+          // when the BOTTOM of the trigger hits the TOP of the viewport
+          end: "bottom top",
+          scrub: 1,
+          pin: true,
+        });
+      });
+      //
 
-  //     //
-  //   },
-  //   { scope: containerRef },
-  // );
+      //
+    },
+    { scope: containerRef },
+  );
   // //
   // return
   return (
