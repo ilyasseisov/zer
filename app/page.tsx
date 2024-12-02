@@ -10,7 +10,10 @@ import useMousePosition from "@/utils/useMousePosition";
 import useResourceLoading from "@/utils/useResourceLoading";
 // useState
 import { useState } from "react";
-
+// useEffect
+import { useEffect } from "react";
+// lenis
+import Lenis from "@studio-freight/lenis";
 // components
 import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
@@ -36,6 +39,18 @@ const Home: FC = () => {
   const { x, y, scrollY } = useMousePosition();
 
   const isLoading = useResourceLoading();
+
+  // lenis
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    const raf = (time: DOMHighResTimeStamp) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    requestAnimationFrame(raf);
+  }, []);
 
   // local variables
   const size = isHoveredSize0 ? 0 : isHovered ? 600 : 60;
