@@ -76,7 +76,7 @@ const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
             {/* 1 */}
             <div
               data-section
-              className="flex h-[600px] flex-col items-start justify-center border-t-1 border-solid border-y-grey border-opacity-25 md:h-[900px] xl:h-[100vh]"
+              className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-grey border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40"
             >
               <Paragraph quote className="mb-10 md:mb-16 xl:mb-24">
                 High level creativity and professionalism. Highly recommend!
@@ -93,7 +93,7 @@ const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
             {/* 2 */}
             <div
               data-section
-              className="flex h-[600px] flex-col items-start justify-center border-t-1 border-solid border-y-grey border-opacity-25 md:h-[900px] xl:h-[100vh]"
+              className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-grey border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40"
             >
               <Paragraph quote className="mb-10 md:mb-16 xl:mb-24">
                 Innovative designs delivered on time, every time!
@@ -110,7 +110,7 @@ const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
             {/* 3 */}
             <div
               data-section
-              className="flex h-[600px] flex-col items-start justify-center border-t-1 border-solid border-y-grey border-opacity-25 md:h-[900px] xl:h-[100vh]"
+              className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-grey border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40"
             >
               <Paragraph quote className="mb-10 md:mb-16 xl:mb-24">
                 Great attention to detail, fantastic collaborative team!
