@@ -67,7 +67,7 @@ const Home: FC = () => {
         transition={{
           type: "tween",
           ease: "backOut",
-          duration: 0.6,
+          duration: 0.75,
           velocity: 4,
         }}
       >

@@ -13,7 +13,7 @@ import { useGSAP } from "@gsap/react";
 import images from "@/public/img";
 // types
 type LoadingProps = {
-  isLoading: boolean;
+  isLoading?: boolean;
 };
 
 const SocialIcons: FC<LoadingProps> = ({ isLoading }) => {

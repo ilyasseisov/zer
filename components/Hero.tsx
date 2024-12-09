@@ -14,7 +14,7 @@ import { useGSAP } from "@gsap/react";
 
 // types
 type HeroProps = {
-  isLoading: boolean;
+  isLoading?: boolean;
 };
 
 const Hero: FC<HeroProps> = ({ isLoading }) => {
