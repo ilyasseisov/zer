@@ -93,9 +93,7 @@ const Home: FC = () => {
   useEffect(() => {
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-    const lenis = new Lenis({
-      lerp: isSafari ? 1 : 0.5,
-    });
+    const lenis = new Lenis({});
 
     const raf = (time: DOMHighResTimeStamp) => {
       lenis.raf(time);
