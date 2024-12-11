@@ -33,7 +33,7 @@ const Reel: FC = () => {
         ScrollTrigger.create({
           trigger: containerRef.current,
           animation: tl,
-          markers: true,
+          // markers: true,
           // when the TOP of the trigger hits the TOP of the viewport
           start: "top top",
           // when the BOTTOM of the trigger hits the TOP of the viewport

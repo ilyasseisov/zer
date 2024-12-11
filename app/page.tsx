@@ -5,6 +5,9 @@ import { FC } from "react";
 // framer motion
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
+// gsap
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 // custom hooks
 import useMousePosition from "@/utils/useMousePosition";
 import useResourceLoading from "@/utils/useResourceLoading";
@@ -12,8 +15,11 @@ import useResourceLoading from "@/utils/useResourceLoading";
 import { useState } from "react";
 // useEffect
 import { useEffect } from "react";
+// useRef
+import { useRef } from "react";
 // lenis
 import Lenis from "@studio-freight/lenis";
+
 // components
 import Preloader from "@/components/Preloader";
 import Header from "@/components/Header";
@@ -37,12 +43,59 @@ const Home: FC = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isHoveredSize0, setIsHoveredSize0] = useState(false);
   const { x, y, scrollY } = useMousePosition();
-
   const isLoading = useResourceLoading();
+
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollTo = useRef<ReturnType<typeof gsap.quickSetter> | null>(null);
+  let lastScrollY = 0;
+  let lastTime = performance.now();
+  // useGSAP
+  useGSAP(
+    () => {
+      scrollTo.current = gsap.quickSetter(containerRef.current, "y", "px");
+    },
+    { scope: containerRef },
+  );
+
+  const handleScroll = () => {
+    const currentTime = performance.now();
+    const currentScrollY = window.scrollY;
+    const deltaTime = currentTime - lastTime;
+
+    // Estimate future scroll position based on velocity
+    const velocity = (currentScrollY - lastScrollY) / deltaTime;
+    const predictedScrollY = currentScrollY + velocity * 16; // 16ms ≈ 1 frame
+
+    requestAnimationFrame(() => {
+      const isSafari = /^((?!chrome|android).)*safari/i.test(
+        navigator.userAgent,
+      );
+
+      if (isSafari) {
+        // For Safari
+        scrollTo.current?.(-currentScrollY);
+      } else {
+        // For Chrome (and other browsers)
+        scrollTo.current?.(-predictedScrollY);
+      }
+    });
+
+    lastScrollY = currentScrollY;
+    lastTime = currentTime;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // lenis
   useEffect(() => {
-    const lenis = new Lenis();
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    const lenis = new Lenis({
+      lerp: isSafari ? 1 : 0.5,
+    });
 
     const raf = (time: DOMHighResTimeStamp) => {
       lenis.raf(time);
@@ -72,8 +125,9 @@ const Home: FC = () => {
         }}
       >
         <div
+          ref={containerRef}
           style={{
-            transform: `translateY(-${scrollY ?? 0}px)`,
+            // transform: `translateY(-${scrollY ?? 0}px)`,
             willChange: "transform",
           }}
           className="relative"
