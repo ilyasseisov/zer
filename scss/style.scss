@@ -12,6 +12,10 @@ $grey: #8c8c8c;
 $white: #ffffff;
 
 @layer base {
+  body {
+    overflow-x: hidden;
+  }
+
   // prevent text selection
   h2,
   h3,

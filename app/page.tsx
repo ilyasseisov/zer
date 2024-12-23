@@ -36,6 +36,7 @@ import ShadeTopBottom from "@/components/misc/ShadeTopBottom";
 import SocialIcons from "@/components/SocialIcons";
 import HireUsButton from "@/components/ui/HireUsButton";
 import Paragraph from "@/components/ui/Paragraph";
+
 //
 //
 const Home: FC = () => {
@@ -91,8 +92,6 @@ const Home: FC = () => {
 
   // lenis
   useEffect(() => {
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
     const lenis = new Lenis({});
 
     const raf = (time: DOMHighResTimeStamp) => {
@@ -118,7 +117,7 @@ const Home: FC = () => {
         transition={{
           type: "tween",
           ease: "backOut",
-          duration: 0.75,
+          duration: 0.6,
           velocity: 4,
         }}
       >
