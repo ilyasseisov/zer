@@ -322,7 +322,8 @@ const Home: FC = () => {
                       className="mb-10 md:mb-16 xl:mb-24"
                       setIsHovered={setIsHovered}
                     >
-                      Haha! My six year old sister can do better than this guys.
+                      Haha! My six year old sister can do better than these
+                      guys.
                     </Paragraph>
                     {/* signature */}
                     <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
