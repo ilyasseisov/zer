@@ -295,6 +295,44 @@ $white: #ffffff;
   }
   //   END hero mask
 
+  // Header
+  .custom-hover-link {
+    overflow: hidden;
+    padding: 2px 4px;
+    //
+    span {
+      position: relative;
+      display: inline-block;
+      -webkit-transition: -webkit-transform 0.5s;
+      -moz-transition: -moz-transform 0.5s;
+      transition: transform 0.5s ease-out;
+
+      //
+      &::before {
+        position: absolute;
+        top: 100%;
+        content: attr(data-hover);
+        font-weight: bold;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      //
+    }
+    //
+    &:hover {
+      //
+      span {
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+      //
+    }
+    //
+  }
+  // END Header
+
   // clip path for HoverLines
   [data-text] {
     //

@@ -54,9 +54,14 @@ const Header: FC<LoadingProps> = ({ isLoading }) => {
         <div className="logo h-[40px] w-[73px] md:h-[60px] md:w-[109.5px]">
           <Image alt="logo" src={images.logo} width={146} height={80} />
         </div>
-        <p className="text-20px-capsized md:text-28px-capsized font-stolzl font-normal text-white">
-          HIRE US
-        </p>
+        <a className="custom-hover-link text-20px-capsized md:text-28px-capsized flex h-full flex-col font-stolzl text-white">
+          <span
+            data-hover="HIRE&nbsp;US"
+            className="cursor-pointer font-normal"
+          >
+            HIRE US
+          </span>
+        </a>
       </div>
     </header>
   );
