@@ -44,5 +44,4 @@ videos/*
 !videos/*.ts
 public/_next-video
 
-v1
-v1/*
+*.glb
