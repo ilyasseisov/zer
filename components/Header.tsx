@@ -12,6 +12,7 @@ import { useGSAP } from "@gsap/react";
 // components
 // images
 import images from "../public/img";
+// components
 import MagneticWrapper from "./misc/MagneticWrapper";
 // types
 type LoadingProps = {
