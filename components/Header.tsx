@@ -10,10 +10,9 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 // components
+import MagneticWrapper from "./misc/MagneticWrapper";
 // images
 import images from "../public/img";
-// components
-import MagneticWrapper from "./misc/MagneticWrapper";
 // types
 type LoadingProps = {
   isLoading?: boolean;
