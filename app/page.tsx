@@ -37,13 +37,17 @@ import SocialIcons from "@/components/SocialIcons";
 import HireUsButton from "@/components/ui/HireUsButton";
 import Paragraph from "@/components/ui/Paragraph";
 
+//// components (mask)
+import HeroMask from "@/components/mask/HeroMask";
+import HelpMask from "@/components/mask/HelpMask";
+
 //
 //
 const Home: FC = () => {
   // hooks
   const [isHovered, setIsHovered] = useState(false);
   const [isHoveredSize0, setIsHoveredSize0] = useState(false);
-  const { x, y, scrollY } = useMousePosition();
+  const { x, y } = useMousePosition();
   const isLoading = useResourceLoading();
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -124,45 +128,12 @@ const Home: FC = () => {
         <div
           ref={containerRef}
           style={{
-            // transform: `translateY(-${scrollY ?? 0}px)`,
             willChange: "transform",
           }}
           className="relative"
         >
           {/* hero */}
-          <section className="flex h-screen w-full flex-col items-center justify-center bg-purple-light">
-            <div
-              className="text-center"
-              onMouseEnter={() => {
-                setIsHovered(true);
-              }}
-              onMouseLeave={() => {
-                setIsHovered(false);
-              }}
-            >
-              <h3 className="text-20px-capsized md:text-32px-capsized mb-8 text-center font-stolzl font-normal text-dark md:mb-16">
-                ZER DESIGN
-              </h3>
-              <h2 className="mb-16 flex flex-col gap-y-4">
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  COPYING
-                </span>
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  BORING
-                </span>
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  BRANDS
-                </span>
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  SINCE
-                </span>
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  2020
-                </span>
-              </h2>
-              <HireUsButton bgColor="bg-dark" />
-            </div>
-          </section>
+          <HeroMask isLoading={isLoading} setIsHovered={setIsHovered} />
           {/* END hero */}
 
           {/* reel */}
@@ -342,39 +313,7 @@ const Home: FC = () => {
           {/* END testimonials */}
 
           {/* help */}
-          <section className="flex h-screen w-full flex-col items-center justify-center bg-purple-light">
-            <div
-              className="text-center"
-              onMouseEnter={() => {
-                setIsHovered(true);
-              }}
-              onMouseLeave={() => {
-                setIsHovered(false);
-              }}
-            >
-              <h3 className="text-20px-capsized md:text-32px-capsized mb-8 text-center font-stolzl font-normal text-dark md:mb-16">
-                IN REALITY
-              </h3>
-              <h2 className="mb-16 flex flex-col gap-y-4">
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  WE DO
-                </span>
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  WHATEVER
-                </span>
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  YOU
-                </span>
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  PAY
-                </span>
-                <span className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark">
-                  FOR
-                </span>
-              </h2>
-              <HireUsButton bgColor="bg-dark" />
-            </div>
-          </section>
+          <HelpMask setIsHovered={setIsHovered} />
           {/* END help */}
 
           {/* footer */}

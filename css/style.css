@@ -572,11 +572,15 @@
     height: 192px;
   }
   #hero [data-word-container],
-  #help [data-word-container] {
+  #help [data-word-container],
+  #hero-mask [data-word-container],
+  #help-mask [data-word-container] {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
   #hero [data-word-container] [data-word],
-  #help [data-word-container] [data-word] {
+  #help [data-word-container] [data-word],
+  #hero-mask [data-word-container] [data-word],
+  #help-mask [data-word-container] [data-word] {
     position: relative;
   }
   #preloader {
