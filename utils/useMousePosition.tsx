@@ -8,32 +8,25 @@ type mouseCoordinates = {
   y: number | null;
 };
 
-const useMousePosition = (): mouseCoordinates & { scrollY: number | null } => {
+const useMousePosition = (): mouseCoordinates => {
   // hooks
   const [mousePosition, setMousePosition] = useState<mouseCoordinates>({
     x: null,
     y: null,
   });
-  const [scrollY, setScrollY] = useState<number | null>(null);
 
   const updateMousePosition = (e: MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
   };
 
-  const updateScrollPosition = () => {
-    setScrollY(window.scrollY);
-  };
-
   useEffect(() => {
     window.addEventListener("mousemove", updateMousePosition);
-    window.addEventListener("scroll", updateScrollPosition);
 
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
-      window.removeEventListener("scroll", updateScrollPosition);
     };
   }, []);
 
-  return { x: mousePosition.x, y: mousePosition.y, scrollY };
+  return { x: mousePosition.x, y: mousePosition.y };
 };
 export default useMousePosition;
