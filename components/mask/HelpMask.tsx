@@ -8,9 +8,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// components
-import HireUsButton from "../ui/HireUsButton";
-
 // types
 type HelpMaskProps = {
   setIsHovered: React.Dispatch<React.SetStateAction<boolean>>;
@@ -121,7 +118,6 @@ const HelpMask: FC<HelpMaskProps> = ({ setIsHovered }) => {
               FOR
             </span>
           </h2>
-          <HireUsButton bgColor="bg-dark" />
         </div>
       </section>
     </>

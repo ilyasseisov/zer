@@ -2,8 +2,6 @@
 
 // fc
 import { FC } from "react";
-// components
-import HireUsButton from "./ui/HireUsButton";
 // useRef
 import { useRef } from "react";
 // useEffect
@@ -104,11 +102,6 @@ const Hero: FC<HeroProps> = ({ isLoading }) => {
             </span>
           </div>
         </h2>
-        <div data-word-container>
-          <div data-word>
-            <HireUsButton bgColor="bg-purple-dark" />
-          </div>
-        </div>
       </div>
     </section>
   );

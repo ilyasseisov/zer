@@ -11,6 +11,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 // components
 import MagneticWrapper from "./misc/MagneticWrapper";
+// functions
+import { handleScrollToFooter } from "@/lib/utils";
 // images
 import images from "../public/img";
 // types
@@ -49,6 +51,8 @@ const Header: FC<LoadingProps> = ({ isLoading }) => {
     }
   }, [isLoading]);
 
+  // functions
+
   // return
   return (
     <header ref={containerRef} className="fixed top-0 z-[10003] w-full">
@@ -60,6 +64,7 @@ const Header: FC<LoadingProps> = ({ isLoading }) => {
         </MagneticWrapper>
         <a className="custom-hover-link text-20px-capsized md:text-28px-capsized flex h-full flex-col font-stolzl text-white">
           <span
+            onClick={handleScrollToFooter}
             data-hover="HIRE&nbsp;US"
             className="cursor-pointer font-normal"
           >
