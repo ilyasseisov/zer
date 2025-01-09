@@ -1,7 +1,5 @@
 // fc
 import { FC, useState } from "react";
-// components
-import HireUsButton from "./ui/HireUsButton";
 // useRef
 import { useRef } from "react";
 // gsap
@@ -109,11 +107,6 @@ const Help: FC = () => {
             </span>
           </div>
         </h2>
-        <div data-word-container>
-          <div data-word>
-            <HireUsButton bgColor="bg-purple-dark" />
-          </div>
-        </div>
       </div>
     </section>
   );

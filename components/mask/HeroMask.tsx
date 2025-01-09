@@ -8,8 +8,8 @@ import { useEffect } from "react";
 // gsap
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-// components
-import HireUsButton from "../ui/HireUsButton";
+// functions
+import { handleScrollToFooter } from "@/lib/utils";
 
 // types
 type HeroMaskProps = {
@@ -115,7 +115,6 @@ const HeroMask: FC<HeroMaskProps> = ({ setIsHovered, isLoading }) => {
               </span>
             </div>
           </h2>
-          <HireUsButton bgColor="bg-dark" />
         </div>
       </section>
     </>
