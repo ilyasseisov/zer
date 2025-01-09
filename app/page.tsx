@@ -34,7 +34,6 @@ import Help from "@/components/Help";
 import Footer from "@/components/Footer";
 import ShadeTopBottom from "@/components/misc/ShadeTopBottom";
 import SocialIcons from "@/components/SocialIcons";
-import HireUsButton from "@/components/ui/HireUsButton";
 import Paragraph from "@/components/ui/Paragraph";
 
 //// components (mask)
