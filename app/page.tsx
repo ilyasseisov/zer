@@ -38,7 +38,14 @@ import Paragraph from "@/components/ui/Paragraph";
 
 //// components (mask)
 import HeroMask from "@/components/mask/HeroMask";
+import ReelMask from "@/components/mask/ReelMask";
 import HelpMask from "@/components/mask/HelpMask";
+import AboutMask from "@/components/mask/AboutMask";
+import ServicesMask from "@/components/mask/ServicesMask";
+import ExperienceMask from "@/components/mask/ExperienceMask";
+import ClientsMask from "@/components/mask/ClientsMask";
+import TestimonialsMask from "@/components/mask/TestimonialsMask";
+import FooterMask from "@/components/mask/FooterMask";
 
 //
 //
@@ -131,199 +138,15 @@ const Home: FC = () => {
           }}
           className="relative"
         >
-          {/* hero */}
           <HeroMask isLoading={isLoading} setIsHovered={setIsHovered} />
-          {/* END hero */}
-
-          {/* reel */}
-          <section className="min-h-screen w-full bg-purple-light xl:h-[200vh]"></section>
-          {/* END reel */}
-
-          {/* about */}
-          <section className="grid h-[600px] grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 sm:h-[720px] md:h-[840px] md:px-0 xl:h-[1200px]">
-            <div className="col-span-12 flex w-full flex-col items-start justify-start py-28 md:col-span-10 md:py-32 xl:col-span-8 xl:py-40">
-              <div
-                onMouseEnter={() => {
-                  setIsHovered(true);
-                }}
-                onMouseLeave={() => {
-                  setIsHovered(false);
-                }}
-              >
-                <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-dark md:mb-16">
-                  ABOUT US
-                </h3>
-                <Paragraph textDark>
-                  We do 2D & 3D graphics because, everyone does it. We build
-                  websites like it’s rocket science (but totally isn’t). And
-                  pretend to know marketing
-                </Paragraph>
-              </div>
-            </div>
-          </section>
-          {/* END about */}
-
-          {/* services */}
-          <section className="grid min-h-screen grid-cols-[repeat(auto-fit,_8.333333%)] justify-center md:px-0">
-            <div className="col-span-12 flex w-full flex-col items-start justify-center">
-              <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full pl-4 font-stolzl font-normal text-dark md:mb-16 md:pl-[8.333333%] xl:pl-[16.666666%]">
-                WHAT WE DO
-              </h3>
-              {/* lines */}
-              {Array(5)
-                .fill("")
-                .map((line, index) => (
-                  <div
-                    data-text
-                    key={index}
-                    className="text-48px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized font-stolzl font-bold"
-                  >
-                    <p>&nbsp;</p>
-                    <span></span>
-                    <div className="!bg-dark underline"></div>
-                    <div className="upperline !bg-dark"></div>
-                  </div>
-                ))}
-            </div>
-          </section>
-          {/* END services */}
-
-          {/* experience */}
-          <section className="grid h-[600px] grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 sm:h-[720px] md:h-[840px] md:px-0 xl:h-[1200px]">
-            <div className="col-span-12 flex w-full flex-col items-start justify-start py-28 md:col-span-10 md:py-32 xl:col-span-8 xl:py-40">
-              <div
-                onMouseEnter={() => {
-                  setIsHovered(true);
-                }}
-                onMouseLeave={() => {
-                  setIsHovered(false);
-                }}
-              >
-                <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-dark md:mb-16">
-                  EXPERIENCE
-                </h3>
-                <Paragraph textDark>
-                  We Photoshop stock images and Freepik vectors. Build websites
-                  with ChatGPT and AI. All our employees graduated from YouTube
-                  university
-                </Paragraph>
-              </div>
-            </div>
-          </section>
-          {/* END experience */}
-
-          {/* clients */}
-          <section className="grid min-h-screen grid-cols-[repeat(auto-fit,_8.333333%)] justify-center md:px-0">
-            <div className="col-span-12 flex w-full flex-col items-start justify-center">
-              <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full pl-4 font-stolzl font-normal text-dark md:mb-16 md:pl-[8.333333%] xl:pl-[16.666666%]">
-                CLIENTS
-              </h3>
-              {/* lines */}
-              {Array(5)
-                .fill("")
-                .map((line, index) => (
-                  <div
-                    data-text
-                    key={index}
-                    className="text-48px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized font-stolzl font-bold"
-                  >
-                    <p>&nbsp;</p>
-                    <span></span>
-                    <div className="!bg-dark underline"></div>
-                    <div className="upperline !bg-dark"></div>
-                  </div>
-                ))}
-            </div>
-          </section>
-          {/* END clients */}
-
-          {/* testimonials */}
-          <section className="grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:px-0">
-            <div className="col-span-12 flex w-full flex-col items-start justify-center text-white md:col-span-10 xl:col-span-8">
-              <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-dark md:mb-16">
-                WHAT THEY SAID
-              </h3>
-              <div className="slider grid w-full grid-cols-12">
-                <div className="reviews col-span-9 flex flex-col items-center gap-y-8">
-                  {/* 1 */}
-                  <div className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-dark border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40">
-                    <Paragraph
-                      textDark
-                      quoteDark
-                      className="mb-10 md:mb-16 xl:mb-24"
-                      setIsHovered={setIsHovered}
-                    >
-                      I am his old friend. He made say nice things about him.
-                    </Paragraph>
-                    {/* signature */}
-                    <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
-                      Alexander Doe
-                    </div>
-                    <div className="font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:text-[20px]">
-                      CEO - Pixel Design
-                    </div>
-                  </div>
-
-                  {/* 2 */}
-                  <div className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-dark border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40">
-                    <Paragraph
-                      textDark
-                      quoteDark
-                      className="mb-10 md:mb-16 xl:mb-24"
-                      setIsHovered={setIsHovered}
-                    >
-                      They finally make it work after countless rounds of
-                      feedback.
-                    </Paragraph>
-                    {/* signature */}
-                    <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
-                      Alexander Doe
-                    </div>
-                    <div className="font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:text-[20px]">
-                      CEO - Pixel Design
-                    </div>
-                  </div>
-
-                  {/* 3 */}
-                  <div className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-dark border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40">
-                    <Paragraph
-                      textDark
-                      quoteDark
-                      className="mb-10 md:mb-16 xl:mb-24"
-                      setIsHovered={setIsHovered}
-                    >
-                      Haha! My six year old sister can do better than these
-                      guys.
-                    </Paragraph>
-                    {/* signature */}
-                    <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
-                      Alexander Doe
-                    </div>
-                    <div className="font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:text-[20px]">
-                      CEO - Pixel Design
-                    </div>
-                  </div>
-                </div>
-                {/* avatars */}
-                <div className="col-span-3 h-[100vh]"></div>
-              </div>
-            </div>
-          </section>
-          {/* END testimonials */}
-
-          {/* help */}
+          <ReelMask />
+          <AboutMask setIsHovered={setIsHovered} />
+          <ServicesMask />
+          <ExperienceMask setIsHovered={setIsHovered} />
+          <ClientsMask />
+          <TestimonialsMask setIsHovered={setIsHovered} />
           <HelpMask setIsHovered={setIsHovered} />
-          {/* END help */}
-
-          {/* footer */}
-          <section className="mb-[720px] grid grid-cols-[repeat(auto-fit,_8.333333%)] justify-center px-4 md:mb-[400px] md:px-0 xl:mb-[480px]">
-            <div className="col-span-12 flex w-full flex-col items-start justify-center md:col-span-10 xl:col-span-8">
-              <h3 className="text-20px-capsized md:text-32px-capsized mb-8 w-full font-stolzl font-normal text-dark md:mb-16">
-                CONNECT
-              </h3>
-            </div>
-          </section>
-          {/* END footer */}
+          <FooterMask />
         </div>
       </motion.div>
       {/* END mask */}
