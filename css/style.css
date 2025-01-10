@@ -500,6 +500,9 @@
     transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
     pointer-events: none;
   }
+  [data-hover-element] p {
+    cursor: pointer;
+  }
   [data-hover-element] p:hover + span {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
