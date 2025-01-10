@@ -25,6 +25,10 @@ const Footer: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
       .catch((error) => {
         console.error("Failed to copy text: ", error);
         setEmailText("Type manually");
+        // Reset the text after 5 seconds
+        setTimeout(() => {
+          setEmailText("Click to copy");
+        }, 2000);
       });
   };
   // return
