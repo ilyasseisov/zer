@@ -59,7 +59,13 @@ const Header: FC<LoadingProps> = ({ isLoading }) => {
       <div className="flex w-full items-center justify-between px-4 py-6 text-3xl md:px-8 md:py-12 xl:px-16 xl:py-16">
         <MagneticWrapper>
           <div className="logo h-[40px] w-[73px] md:h-[60px] md:w-[109.5px]">
-            <Image alt="logo" src={images.logo} width={146} height={80} />
+            <Image
+              priority
+              alt="logo"
+              src={images.logo}
+              width={146}
+              height={80}
+            />
           </div>
         </MagneticWrapper>
         <a className="custom-hover-link text-20px-capsized md:text-28px-capsized flex h-full flex-col font-stolzl text-white">
