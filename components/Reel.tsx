@@ -11,7 +11,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // videos
-import zerReel3 from "https://res.cloudinary.com/dvrzwkm1e/video/upload/v1737020873/ad26b43a65edefaed89656130397fc08d91214d0.bin_qtxclj.mp4";
+// import zerReel3 from "https://res.cloudinary.com/dvrzwkm1e/video/upload/v1737020873/ad26b43a65edefaed89656130397fc08d91214d0.bin_qtxclj.mp4";
 import zerReelLocal from "@/videos/zerReel.mp4";
 // images
 import images from "../public/img";

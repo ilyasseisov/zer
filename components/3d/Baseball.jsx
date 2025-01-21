@@ -9,7 +9,7 @@ import { useScroll } from "framer-motion";
 import { motion } from "framer-motion-3d";
 // useRef
 import { useRef } from "react";
-export default function RubiksCube(props) {
+export default function Baseball(props) {
   // hooks
   const scene = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -17,31 +17,30 @@ export default function RubiksCube(props) {
     offset: ["start end", "end start"],
   });
   // local variables
-  const { nodes, materials } = useGLTF("/models/RubiksCube.glb");
+  const { nodes, materials } = useGLTF("/models/Baseball.glb");
   // return
   return (
     <Canvas ref={scene}>
-      <PerspectiveCamera makeDefault position={[10, 20, 20]} />
+      <PerspectiveCamera makeDefault position={[4, 4, 4]} />
       <OrbitControls enabled={false} />
-      <ambientLight intensity={1.5} />
-      {/* cube */}
+      <ambientLight intensity={1} />
+      {/* baseball */}
       <group {...props} dispose={null}>
         <group scale={0.01}>
           <motion.mesh
-            rotation-y={scrollYProgress}
             castShadow
             receiveShadow
-            geometry={nodes.Baked_baked_0.geometry}
-            material={materials.baked}
-            rotation={[-Math.PI / 3, 0, 1]}
-            scale={160}
-            position={[0, -140, 0]}
+            geometry={nodes.Cube_Material_0.geometry}
+            material={materials.Material}
+            rotation={[-Math.PI / 1.5, 0, 0]}
+            rotation-z={scrollYProgress}
+            scale={240}
           />
         </group>
       </group>
-      {/* END cube */}
+      {/* END baseball */}
     </Canvas>
   );
 }
 
-useGLTF.preload("/models/RubiksCube.glb");
+useGLTF.preload("/models/Baseball.glb");

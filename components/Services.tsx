@@ -3,7 +3,7 @@ import { FC } from "react";
 // components
 import HoverLines from "./ui/HoverLines";
 import RubiksCube from "./3d/RubiksCube";
-import Donut from "./3d/Donut";
+import Baseball from "./3d/Baseball";
 
 // types
 type HoverProps = {
@@ -34,11 +34,11 @@ const Services: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
         <RubiksCube />
       </div>
       {/* END rubiks cube */}
-      {/* donut */}
+      {/* baseball */}
       <div className="absolute z-[10002] hidden h-[240px] w-[240px] md:bottom-20 md:right-[-200px] md:block md:h-[360px] md:w-[360px] lg:h-[400px] lg:w-[400px] xl:bottom-2 xl:right-[-240px] xl:h-[480px] xl:w-[480px] 2xl:-bottom-20 2xl:right-[-320px] 2xl:h-[640px] 2xl:w-[640px]">
-        <Donut />
+        <Baseball />
       </div>
-      {/* END donut */}
+      {/* END baseball */}
     </section>
   );
 };
