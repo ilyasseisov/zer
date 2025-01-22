@@ -18,11 +18,12 @@ const Clients: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
         <HoverLines
           setIsHoveredSize0={setIsHoveredSize0}
           lines={[
-            { text: "ARCHALYK", hover: "WATER" },
+            { text: "ARCHALYK", hover: "DRINKS" },
             { text: "HASAR", hover: "CANDIES" },
-            { text: "MICROSOFT", hover: "SOFTWARE" },
-            { text: "STARBUCKS", hover: "COFFEE" },
-            { text: "PIXEL 55", hover: "DESIGN" },
+            { text: "TAZE AY", hover: "FOOD" },
+            { text: "SENCOMFORT", hover: "HYGIENE" },
+            { text: "DD", hover: "BRICKS" },
+            { text: "SHABAKJA", hover: "FOOD" },
           ]}
         />
       </div>
