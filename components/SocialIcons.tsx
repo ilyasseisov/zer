@@ -58,22 +58,19 @@ const SocialIcons: FC<LoadingProps> = ({ isLoading }) => {
       >
         <MagneticWrapper>
           <a
+            href="https://www.instagram.com/zer_design_official/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="cursor-pointer pb-4 pr-4 pt-4"
           >
-            <Image
-              src={images.dribbble}
-              alt="dribbble"
-              width={40}
-              height={40}
-            />
+            <Image src={images.insta} alt="insta" width={40} height={40} />
           </a>
         </MagneticWrapper>
         <MagneticWrapper>
           <a
+            href="https://tm.linkedin.com/company/zer-design"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="cursor-pointer pb-4 pr-4 pt-4"
           >
             <Image
@@ -86,17 +83,20 @@ const SocialIcons: FC<LoadingProps> = ({ isLoading }) => {
         </MagneticWrapper>
         <MagneticWrapper>
           <a
+            href="https://www.behance.net/hizerdesign"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="cursor-pointer pb-4 pr-4 pt-4"
           >
-            <Image src={images.insta} alt="insta" width={40} height={40} />
+            <Image src={images.behance} alt="behance" width={40} height={40} />
           </a>
         </MagneticWrapper>
+
         <MagneticWrapper>
           <a
+            href="https://zer.design/blog"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="cursor-pointer pb-4 pr-4 pt-4"
           >
             <Image src={images.blog} alt="blog" width={40} height={40} />

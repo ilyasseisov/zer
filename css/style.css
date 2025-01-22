@@ -499,6 +499,7 @@
     clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
     transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
     pointer-events: none;
+    padding-left: 2px;
   }
   [data-hover-element] p {
     cursor: pointer;

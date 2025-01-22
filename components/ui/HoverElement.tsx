@@ -4,6 +4,7 @@ import { FC } from "react";
 type Text = {
   text: string;
   hover: string;
+  url?: string;
 };
 type HoverElementProps = {
   content: Text;
@@ -28,9 +29,10 @@ const HoverElement: FC<HoverElementProps> = ({
           onMouseEnter={() => setIsHoveredSize0(true)}
           onMouseLeave={() => setIsHoveredSize0(false)}
         >
-          {content.text}
+          <a href={content.url} target="_blank" rel="noopener noreferrer">
+            {content.text}
+          </a>
         </p>
-
         <span className="bg-purple-light text-dark">{content.hover}</span>
       </div>
     </>
