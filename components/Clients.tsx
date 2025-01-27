@@ -1,8 +1,13 @@
 // fc
 import { FC } from "react";
+// next
+import dynamic from "next/dynamic";
 // components
 import HoverLines from "./ui/HoverLines";
-import Earth from "./3d/Earth";
+// dynamic components
+const Earth = dynamic(() => import("@/components/3d/Earth"), {
+  ssr: false,
+});
 // types
 type HoverProps = {
   setIsHoveredSize0: (value: boolean) => void;

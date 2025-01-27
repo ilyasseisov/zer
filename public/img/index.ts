@@ -12,6 +12,7 @@ import blog from "./blog.svg";
 import insta from "./insta.svg";
 import linkedin from "./linkedin.svg";
 import behance from "./behance.svg";
+import earthPlaceholder from "./earthPlaceholder.png";
 
 //export
 const images = {
@@ -28,6 +29,7 @@ const images = {
   insta,
   linkedin,
   behance,
+  earthPlaceholder,
 };
 
 export default images;

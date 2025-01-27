@@ -1,10 +1,16 @@
 // fc
 import { FC } from "react";
+// next
+import dynamic from "next/dynamic";
 // components
 import HoverLines from "./ui/HoverLines";
-import RubiksCube from "./3d/RubiksCube";
-import Baseball from "./3d/Baseball";
-
+// dynamic components
+const RubiksCube = dynamic(() => import("@/components/3d/RubiksCube"), {
+  ssr: false,
+});
+const Baseball = dynamic(() => import("@/components/3d/Baseball"), {
+  ssr: false,
+});
 // types
 type HoverProps = {
   setIsHoveredSize0: (value: boolean) => void;
