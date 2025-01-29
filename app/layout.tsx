@@ -1,19 +1,14 @@
 // FC
 import { FC } from "react";
-// meta
-import type { Metadata } from "next";
-// head
-import Head from "next/head";
 // fonts
 import { stolzlFont } from "@/lib/fonts";
 // styles
 import "../css/style.css";
+// schema
+import schema from "../schema/organization-schema.json";
+// metadata
+import { metadata } from "../schema/metadata";
 ////
-export const metadata: Metadata = {
-  title: "ZER Design",
-  description:
-    "Creative and marketing agency. We help turn your ideas into reality.",
-};
 
 type RootLayoutProps = Readonly<{
   children: React.ReactNode;
@@ -22,15 +17,22 @@ type RootLayoutProps = Readonly<{
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <Head>
-        <title>{String(metadata.title)}</title>
-        <meta name="description" content={String(metadata.description)} />
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+      <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <meta name="apple-mobile-web-app-capable" content="no" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      </head>
       <body className={`${stolzlFont.variable} bg-dark`}>{children}</body>
     </html>
   );
 };
 
+export { metadata };
 export default RootLayout;

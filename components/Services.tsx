@@ -1,10 +1,16 @@
 // fc
 import { FC } from "react";
+// next
+import dynamic from "next/dynamic";
 // components
 import HoverLines from "./ui/HoverLines";
-import RubiksCube from "./3d/RubiksCube";
-import Donut from "./3d/Donut";
-
+// dynamic components
+const RubiksCube = dynamic(() => import("@/components/3d/RubiksCube"), {
+  ssr: false,
+});
+const Baseball = dynamic(() => import("@/components/3d/Baseball"), {
+  ssr: false,
+});
 // types
 type HoverProps = {
   setIsHoveredSize0: (value: boolean) => void;
@@ -21,11 +27,12 @@ const Services: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
         <HoverLines
           setIsHoveredSize0={setIsHoveredSize0}
           lines={[
-            { text: "2D & 3D", hover: "GRAPHICS" },
-            { text: "MOTION", hover: "VIDEOS" },
+            { text: "GRAPHICS", hover: "DESIGN" },
+            { text: "MOTION", hover: "3D & 2D" },
             { text: "WEB DESIGN", hover: "WEBSITES" },
             { text: "WEB DEV", hover: "APPS" },
-            { text: "MARKETING", hover: "SEO SMM PPC" },
+            { text: "MARKETING", hover: "DIGITAL" },
+            { text: "BRANDING", hover: "LOGOS & ..." },
           ]}
         />
       </div>
@@ -34,11 +41,11 @@ const Services: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
         <RubiksCube />
       </div>
       {/* END rubiks cube */}
-      {/* donut */}
+      {/* baseball */}
       <div className="absolute z-[10002] hidden h-[240px] w-[240px] md:bottom-20 md:right-[-200px] md:block md:h-[360px] md:w-[360px] lg:h-[400px] lg:w-[400px] xl:bottom-2 xl:right-[-240px] xl:h-[480px] xl:w-[480px] 2xl:-bottom-20 2xl:right-[-320px] 2xl:h-[640px] 2xl:w-[640px]">
-        <Donut />
+        <Baseball />
       </div>
-      {/* END donut */}
+      {/* END baseball */}
     </section>
   );
 };

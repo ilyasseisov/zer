@@ -1,8 +1,13 @@
 // fc
 import { FC } from "react";
+// next
+import dynamic from "next/dynamic";
 // components
 import HoverLines from "./ui/HoverLines";
-import Earth from "./3d/Earth";
+// dynamic components
+const Earth = dynamic(() => import("@/components/3d/Earth"), {
+  ssr: false,
+});
 // types
 type HoverProps = {
   setIsHoveredSize0: (value: boolean) => void;
@@ -18,11 +23,12 @@ const Clients: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
         <HoverLines
           setIsHoveredSize0={setIsHoveredSize0}
           lines={[
-            { text: "ARCHALYK", hover: "WATER" },
+            { text: "ARCHALYK", hover: "DRINKS" },
             { text: "HASAR", hover: "CANDIES" },
-            { text: "MICROSOFT", hover: "SOFTWARE" },
-            { text: "STARBUCKS", hover: "COFFEE" },
-            { text: "PIXEL 55", hover: "DESIGN" },
+            { text: "TAZE AY", hover: "FOOD" },
+            { text: "SENCOMFORT", hover: "HYGIENE" },
+            { text: "DD", hover: "BRICKS" },
+            { text: "SHABAKJA", hover: "FOOD" },
           ]}
         />
       </div>

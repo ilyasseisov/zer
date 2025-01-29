@@ -34,7 +34,6 @@ import Help from "@/components/Help";
 import Footer from "@/components/Footer";
 import ShadeTopBottom from "@/components/misc/ShadeTopBottom";
 import SocialIcons from "@/components/SocialIcons";
-import Paragraph from "@/components/ui/Paragraph";
 
 //// components (mask)
 import HeroMask from "@/components/mask/HeroMask";

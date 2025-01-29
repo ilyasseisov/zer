@@ -47,17 +47,29 @@ const Footer: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
             <HoverElement
               setIsHoveredSize0={setIsHoveredSize0}
               starMarker
-              content={{ text: "Instagram", hover: "Not TikTok" }}
+              content={{
+                text: "Instagram",
+                hover: "Not TikTok",
+                url: "https://www.instagram.com/zer_design_official/",
+              }}
             />
             <HoverElement
               setIsHoveredSize0={setIsHoveredSize0}
               starMarker
-              content={{ text: "LinkedIn", hover: "Serious Us" }}
+              content={{
+                text: "LinkedIn",
+                hover: "Serious Us",
+                url: "https://tm.linkedin.com/company/zer-design",
+              }}
             />
             <HoverElement
               setIsHoveredSize0={setIsHoveredSize0}
               starMarker
-              content={{ text: "Youtube", hover: "Some videos" }}
+              content={{
+                text: "Youtube",
+                hover: "Some videos",
+                url: "https://www.youtube.com/@ZerDesignYouTube",
+              }}
             />
           </div>
           <div className="col-span-12 mb-4 space-y-4 overflow-hidden md:col-span-6 2xl:col-span-4">
@@ -69,12 +81,20 @@ const Footer: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
             <HoverElement
               setIsHoveredSize0={setIsHoveredSize0}
               starMarker
-              content={{ text: "Behance", hover: "Case studies" }}
+              content={{
+                text: "Behance",
+                hover: "Case studies",
+                url: "https://www.behance.net/hizerdesign",
+              }}
             />
             <HoverElement
               setIsHoveredSize0={setIsHoveredSize0}
               starMarker
-              content={{ text: "Facebook", hover: "Fun memes" }}
+              content={{
+                text: "Blog",
+                hover: "Just read it",
+                url: "https://zer.design/blog",
+              }}
             />
           </div>
           <div className="col-span-12 overflow-hidden 2xl:col-span-4">

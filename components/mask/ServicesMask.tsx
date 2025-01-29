@@ -15,7 +15,7 @@ const ServicesMask: FC = () => {
             WHAT WE DO
           </h3>
           {/* lines */}
-          {Array(5)
+          {Array(6)
             .fill("")
             .map((line, index) => (
               <div

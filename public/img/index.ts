@@ -9,9 +9,10 @@ import person2 from "./person2.jpg";
 import person3 from "./person3.jpg";
 import quote from "./quote.svg";
 import blog from "./blog.svg";
-import dribbble from "./dribbble.svg";
 import insta from "./insta.svg";
 import linkedin from "./linkedin.svg";
+import behance from "./behance.svg";
+import earthPlaceholder from "./earthPlaceholder.png";
 
 //export
 const images = {
@@ -25,9 +26,10 @@ const images = {
   person3,
   quote,
   blog,
-  dribbble,
   insta,
   linkedin,
+  behance,
+  earthPlaceholder,
 };
 
 export default images;

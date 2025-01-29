@@ -1,7 +1,7 @@
 "use client";
 // fiber
 import { Canvas, useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three/src/loaders/TextureLoader";
+import { TextureLoader } from "three";
 // framer-motion
 import { useScroll } from "framer-motion";
 // framer-motion-3d
