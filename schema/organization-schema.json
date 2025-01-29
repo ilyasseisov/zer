@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ZER Design",
+  "url": "https://zer.design/",
+  "logo": "https://zer.design/og.png",
+  "sameAs": [
+    "https://www.instagram.com/zer_design_official/",
+    "https://tm.linkedin.com/company/zer-design",
+    "https://www.youtube.com/@ZerDesignYouTube",
+    "https://www.behance.net/hizerdesign"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+99365805234",
+      "contactType": "customer service",
+      "email": "hi@zer.design",
+      "availableLanguage": ["en", "ru"]
+    }
+  ]
+}
