@@ -23,7 +23,7 @@ export default function RubiksCube(props) {
     <Canvas ref={scene}>
       <PerspectiveCamera makeDefault position={[10, 20, 20]} />
       <OrbitControls enabled={false} />
-      <ambientLight intensity={1.5} />
+      <ambientLight intensity={0.5} />
       {/* cube */}
       <group {...props} dispose={null}>
         <group scale={0.01}>

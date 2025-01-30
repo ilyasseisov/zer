@@ -1,6 +1,5 @@
 // file import
 import logo from "./logo.svg";
-import star from "./star.svg";
 import starSoft from "./starSoft.svg";
 import maksCircle from "./maksCircle.svg";
 import videoPoster from "./videoPoster.png";
@@ -12,12 +11,10 @@ import blog from "./blog.svg";
 import insta from "./insta.svg";
 import linkedin from "./linkedin.svg";
 import behance from "./behance.svg";
-import earthPlaceholder from "./earthPlaceholder.png";
 
 //export
 const images = {
   logo,
-  star,
   starSoft,
   maksCircle,
   videoPoster,
@@ -29,7 +26,6 @@ const images = {
   insta,
   linkedin,
   behance,
-  earthPlaceholder,
 };
 
 export default images;

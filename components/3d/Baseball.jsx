@@ -23,7 +23,7 @@ export default function Baseball(props) {
     <Canvas ref={scene}>
       <PerspectiveCamera makeDefault position={[4, 4, 4]} />
       <OrbitControls enabled={false} />
-      <ambientLight intensity={1} />
+      <ambientLight intensity={0.4} />
       {/* baseball */}
       <group {...props} dispose={null}>
         <group scale={0.01}>
