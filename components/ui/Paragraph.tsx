@@ -35,7 +35,7 @@ const Paragraph: FC<ParagraphProps> = ({
   const container = useRef<HTMLParagraphElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start 0.9", "start 0.4"],
+    offset: ["start 0.8", "start 0.25"],
   });
   // local vars
   const words = children.split(" ");
@@ -46,7 +46,7 @@ const Paragraph: FC<ParagraphProps> = ({
       <p
         data-paragraph
         ref={container}
-        className={`${className} ${quote ? "quote" : ""} ${quoteDark ? "quoteDark" : ""} ${textDark ? "text-dark" : "text-white"} word-wrap text-36px-capsized md:text-64px-capsized xl:text-96px-capsized relative flex flex-wrap hyphens-auto text-left font-stolzl font-medium`}
+        className={`${className} ${quote ? "quote" : ""} ${quoteDark ? "quoteDark" : ""} ${textDark ? "text-dark" : "text-white"} word-wrap text-36px-capsized md:text-64px-capsized xl:text-80px-capsized 2xl:text-96px-capsized relative flex flex-wrap hyphens-auto text-left font-stolzl font-medium`}
         onMouseEnter={() => {
           if (setIsHovered) {
             setIsHovered(true);
