@@ -1,5 +1,7 @@
 // FC
 import { FC } from "react";
+// Next Script
+import Script from "next/script";
 // fonts
 import { stolzlFont } from "@/lib/fonts";
 // styles
@@ -21,6 +23,11 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="57095dca-2bfa-455a-b755-6a2a28a68640"
+          strategy="lazyOnload"
         />
       </head>
       <body className={`${stolzlFont.variable} bg-dark`}>{children}</body>
