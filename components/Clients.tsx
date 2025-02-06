@@ -32,7 +32,7 @@ const Clients: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
           ]}
         />
       </div>
-      <div className="absolute left-0 top-0 h-full w-full">
+      <div className="absolute left-0 top-0 hidden h-full w-full md:block">
         <Earth />
       </div>
     </section>

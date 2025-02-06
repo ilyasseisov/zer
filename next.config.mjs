@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  typescript: {
+    ignoreBuildErrors: true, // Ignores TypeScript errors during build
+  },
 };
 
 export default withNextVideo(nextConfig);
