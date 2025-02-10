@@ -79,14 +79,17 @@ const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
               className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-grey border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40"
             >
               <Paragraph quote className="mb-10 md:mb-16 xl:mb-24">
-                The secret ingredient to Archalyk's success story!
+                The secret ingredient to Archalyk&apos;s success story!
               </Paragraph>
               {/* signature */}
               <div className="mb-1 font-stolzl text-[20px] font-normal opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
                 Myahri Garajanova
               </div>
+              <div className="mb-1 font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:mb-2 xl:text-[20px]">
+                Head of the Export Dept. :: Archalyk
+              </div>
               <div className="font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:text-[20px]">
-                Head of the Export Dept - Archalyk
+                The lead bottled water and beverages company in Turkmenistan
               </div>
             </div>
 
@@ -102,8 +105,11 @@ const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
               <div className="mb-1 font-stolzl text-[20px] font-normal opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
                 Yakub Ashirov
               </div>
+              <div className="mb-1 font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:mb-2 xl:text-[20px]">
+                Deputy Head of Sales Dept. :: Hasar
+              </div>
               <div className="font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:text-[20px]">
-                Deputy Head of Sales Department - Hasar
+                The lead confectionery company in Turkmenistan
               </div>
             </div>
 
@@ -119,8 +125,11 @@ const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
               <div className="mb-1 font-stolzl text-[20px] font-normal opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
                 Gadam Hoshvagtov
               </div>
+              <div className="mb-1 font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:mb-2 xl:text-[20px]">
+                CEO :: Dovletli Dovran
+              </div>
               <div className="font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:text-[20px]">
-                CEO - Dovletli Dovran
+                The lead ceramic products company in Turkmenistan
               </div>
             </div>
           </div>

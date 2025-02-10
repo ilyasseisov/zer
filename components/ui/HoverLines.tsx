@@ -59,7 +59,7 @@ const HoverLines: FC<HoverLinesProps> = ({ lines, setIsHoveredSize0 }) => {
           <div
             data-text
             key={index}
-            className="text-48px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized font-stolzl font-bold"
+            className="text-48px-capsized md:text-88px-capsized xl:text-120px-capsized 2xl:text-160px-capsized font-stolzl font-bold"
           >
             <p
               onMouseEnter={() => setIsHoveredSize0(true)}

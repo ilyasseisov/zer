@@ -181,6 +181,22 @@
     display: table;
   }
   /* END 80px */
+  /*  88px */
+  .text-88px-capsized {
+    font-size: 88px;
+    line-height: 85.6px;
+  }
+  .text-88px-capsized::before {
+    content: "";
+    margin-bottom: -0.1564em;
+    display: table;
+  }
+  .text-88px-capsized::after {
+    content: "";
+    margin-top: -0.1164em;
+    display: table;
+  }
+  /* END 88px */
   /* md */
   /* 96px */
   .text-96px-capsized {

@@ -27,11 +27,11 @@ const Services: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
         <HoverLines
           setIsHoveredSize0={setIsHoveredSize0}
           lines={[
-            { text: "GRAPHICS", hover: "DESIGN" },
+            { text: "WEB DEV", hover: "APPS & SAAS" },
+            { text: "WEB DESIGN", hover: "U C OUR WORK" },
             { text: "MOTION", hover: "3D & 2D" },
-            { text: "WEB DESIGN", hover: "WEBSITES" },
-            { text: "WEB DEV", hover: "APPS" },
             { text: "MARKETING", hover: "DIGITAL" },
+            { text: "GRAPHICS", hover: "DESIGN" },
             { text: "BRANDING", hover: "LOGOS & ..." },
           ]}
         />
