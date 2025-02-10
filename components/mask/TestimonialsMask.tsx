@@ -37,10 +37,10 @@ const TestimonialsMask: FC<TestimonialsMaskProps> = ({ setIsHovered }) => {
                 <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
                   Myahri Garajanova
                 </div>
-                <div className="mb-1 font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:mb-2 xl:text-[20px]">
+                <div className="mb-2 font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:mb-2 xl:text-[20px]">
                   Head of the Export Dept. :: Archalyk
                 </div>
-                <div className="mb-1 font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:mb-2 xl:text-[20px]">
+                <div className="mb-1 font-stolzl text-[14px] font-normal text-dark opacity-60 md:text-[16px] xl:mb-3 xl:text-[18px]">
                   The lead bottled water and beverages company in Turkmenistan
                 </div>
               </div>
@@ -59,10 +59,10 @@ const TestimonialsMask: FC<TestimonialsMaskProps> = ({ setIsHovered }) => {
                 <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
                   Yakub Ashirov
                 </div>
-                <div className="mb-1 font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:mb-2 xl:text-[20px]">
+                <div className="mb-2 font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:mb-3 xl:text-[20px]">
                   Deputy Head of Sales Dept. :: Hasar
                 </div>
-                <div className="font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:text-[20px]">
+                <div className="font-stolzl text-[14px] font-normal text-dark opacity-60 md:text-[16px] xl:text-[18px]">
                   The lead confectionery company in Turkmenistan
                 </div>
               </div>
@@ -81,10 +81,10 @@ const TestimonialsMask: FC<TestimonialsMaskProps> = ({ setIsHovered }) => {
                 <div className="mb-1 font-stolzl text-[20px] font-normal text-dark opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
                   Gadam Hoshvagtov
                 </div>
-                <div className="mb-1 font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:mb-2 xl:text-[20px]">
+                <div className="mb-2 font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:mb-3 xl:text-[20px]">
                   CEO :: Dovletli Dovran
                 </div>
-                <div className="font-stolzl text-[16px] font-normal text-dark opacity-60 md:text-[18px] xl:text-[20px]">
+                <div className="font-stolzl text-[14px] font-normal text-dark opacity-60 md:text-[16px] xl:text-[18px]">
                   The lead ceramic products company in Turkmenistan
                 </div>
               </div>
