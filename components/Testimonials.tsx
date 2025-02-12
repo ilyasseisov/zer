@@ -79,14 +79,17 @@ const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
               className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-grey border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40"
             >
               <Paragraph quote className="mb-10 md:mb-16 xl:mb-24">
-                High level creativity and mastery. Highly recommend!
+                The secret ingredient to Archalyk&apos;s success story!
               </Paragraph>
               {/* signature */}
               <div className="mb-1 font-stolzl text-[20px] font-normal opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
-                Alexander Doe
+                Myahri Garajanova
               </div>
-              <div className="font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:text-[20px]">
-                CEO - Pixel Design
+              <div className="mb-2 font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:mb-3 xl:text-[20px]">
+                Head of the Export Dept. :: Archalyk
+              </div>
+              <div className="font-stolzl text-[14px] font-normal opacity-60 md:text-[16px] xl:text-[18px]">
+                The lead bottled water and beverages company in Turkmenistan
               </div>
             </div>
 
@@ -96,14 +99,17 @@ const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
               className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-grey border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40"
             >
               <Paragraph quote className="mb-10 md:mb-16 xl:mb-24">
-                Innovative designs delivered on time, every time!
+                With Zer we turned our focus to what truly matters.
               </Paragraph>
               {/* signature */}
               <div className="mb-1 font-stolzl text-[20px] font-normal opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
-                Alexander Doe
+                Yakub Ashirov
               </div>
-              <div className="font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:text-[20px]">
-                CEO - Pixel Design
+              <div className="mb-2 font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:mb-3 xl:text-[20px]">
+                Deputy Head of Sales Dept. :: Hasar
+              </div>
+              <div className="font-stolzl text-[14px] font-normal opacity-60 md:text-[16px] xl:text-[18px]">
+                The lead confectionery company in Turkmenistan
               </div>
             </div>
 
@@ -113,14 +119,17 @@ const Testimonials: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
               className="flex h-[600px] flex-col items-start justify-start border-t-1 border-solid border-y-grey border-opacity-25 py-28 sm:h-[720px] md:h-[840px] md:py-32 xl:h-[1200px] xl:py-40"
             >
               <Paragraph quote className="mb-10 md:mb-16 xl:mb-24">
-                Great attention to detail, fantastic collaborative team!
+                Zer went above and beyond to meet our hopes all the way.
               </Paragraph>
               {/* signature */}
               <div className="mb-1 font-stolzl text-[20px] font-normal opacity-80 md:text-[24px] xl:mb-2 xl:text-[28px]">
-                Alexander Doe
+                Gadam Hoshvagtov
               </div>
-              <div className="font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:text-[20px]">
-                CEO - Pixel Design
+              <div className="mb-2 font-stolzl text-[16px] font-normal opacity-60 md:text-[18px] xl:mb-3 xl:text-[20px]">
+                CEO :: Dovletli Dovran
+              </div>
+              <div className="font-stolzl text-[14px] font-normal opacity-60 md:text-[16px] xl:text-[18px]">
+                The lead ceramic products company in Turkmenistan
               </div>
             </div>
           </div>
