@@ -66,15 +66,7 @@ const Hero: FC<HeroProps> = ({ isLoading }) => {
               data-word
               className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-white"
             >
-              CRAFTING
-            </span>
-          </div>
-          <div data-word-container>
-            <span
-              data-word
-              className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-purple-light"
-            >
-              COOL
+              MAKING
             </span>
           </div>
           <div data-word-container>
@@ -83,6 +75,14 @@ const Hero: FC<HeroProps> = ({ isLoading }) => {
               className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-purple-light"
             >
               BRANDS
+            </span>
+          </div>
+          <div data-word-container>
+            <span
+              data-word
+              className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-purple-light"
+            >
+              DIGITAL
             </span>
           </div>
           <div data-word-container>

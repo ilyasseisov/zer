@@ -79,7 +79,7 @@ const HeroMask: FC<HeroMaskProps> = ({ setIsHovered, isLoading }) => {
                 data-word
                 className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark"
               >
-                COPYING
+                JUST
               </span>
             </div>
             <div data-word-container>
@@ -87,7 +87,7 @@ const HeroMask: FC<HeroMaskProps> = ({ setIsHovered, isLoading }) => {
                 data-word
                 className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark"
               >
-                BORING
+                CREATING
               </span>
             </div>
             <div data-word-container>
@@ -95,7 +95,7 @@ const HeroMask: FC<HeroMaskProps> = ({ setIsHovered, isLoading }) => {
                 data-word
                 className="text-52px-capsized sm:text-80px-capsized md:text-96px-capsized xl:text-120px-capsized 2xl:text-160px-capsized block text-center font-stolzl font-medium text-dark"
               >
-                BRANDS
+                CONTENT
               </span>
             </div>
             <div data-word-container>
