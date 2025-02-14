@@ -1,5 +1,5 @@
 // fc
-import { FC, useState } from "react";
+import { FC } from "react";
 // useRef
 import { useRef } from "react";
 // gsap
