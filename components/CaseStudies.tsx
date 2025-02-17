@@ -43,7 +43,7 @@ const CaseStudies: FC = () => {
           onUpdate: (e) => {
             direction = e.direction * -1;
           },
-          markers: true,
+          // markers: true,
         },
         x: "-500px",
       });

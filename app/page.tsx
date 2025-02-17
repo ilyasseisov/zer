@@ -35,6 +35,7 @@ import Footer from "@/components/Footer";
 import ShadeTopBottom from "@/components/misc/ShadeTopBottom";
 import SocialIcons from "@/components/SocialIcons";
 import CaseStudies from "@/components/CaseStudies";
+import Stats from "@/components/Stats";
 
 //// components (mask)
 import HeroMask from "@/components/mask/HeroMask";
@@ -47,7 +48,6 @@ import ClientsMask from "@/components/mask/ClientsMask";
 import TestimonialsMask from "@/components/mask/TestimonialsMask";
 import FooterMask from "@/components/mask/FooterMask";
 import CaseStudiesMask from "@/components/mask/CaseStudiesMask";
-
 //
 //
 const Home: FC = () => {
@@ -119,7 +119,7 @@ const Home: FC = () => {
   return (
     <main className="container w-full max-w-none">
       {/* mask */}
-      <motion.div
+      {/* <motion.div
         className="mask-hero fixed z-[9999] w-full"
         animate={{
           WebkitMaskPosition: `${(x ?? 0) - size / 2}px ${(y ?? 0) - size / 2}px`,
@@ -150,7 +150,7 @@ const Home: FC = () => {
           <HelpMask setIsHovered={setIsHovered} />
           <FooterMask />
         </div>
-      </motion.div>
+      </motion.div> */}
       {/* END mask */}
 
       {/* body */}
@@ -165,6 +165,7 @@ const Home: FC = () => {
       <CaseStudies />
       <About />
       <Services setIsHoveredSize0={setIsHoveredSize0} />
+      <Stats />
       <Experience />
       <Clients setIsHoveredSize0={setIsHoveredSize0} />
       <Testimonials setIsHoveredSize0={setIsHoveredSize0} />
