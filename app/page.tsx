@@ -35,6 +35,7 @@ import Footer from "@/components/Footer";
 import ShadeTopBottom from "@/components/misc/ShadeTopBottom";
 import SocialIcons from "@/components/SocialIcons";
 import CaseStudies from "@/components/CaseStudies";
+import Stats from "@/components/Stats";
 
 //// components (mask)
 import HeroMask from "@/components/mask/HeroMask";
@@ -47,7 +48,7 @@ import ClientsMask from "@/components/mask/ClientsMask";
 import TestimonialsMask from "@/components/mask/TestimonialsMask";
 import FooterMask from "@/components/mask/FooterMask";
 import CaseStudiesMask from "@/components/mask/CaseStudiesMask";
-
+import StatsMask from "@/components/mask/StatsMask";
 //
 //
 const Home: FC = () => {
@@ -144,6 +145,7 @@ const Home: FC = () => {
           <CaseStudiesMask setIsHovered={setIsHovered} />
           <AboutMask setIsHovered={setIsHovered} />
           <ServicesMask />
+          <StatsMask setIsHovered={setIsHovered} />
           <ExperienceMask setIsHovered={setIsHovered} />
           <ClientsMask />
           <TestimonialsMask setIsHovered={setIsHovered} />
@@ -165,6 +167,7 @@ const Home: FC = () => {
       <CaseStudies />
       <About />
       <Services setIsHoveredSize0={setIsHoveredSize0} />
+      <Stats />
       <Experience />
       <Clients setIsHoveredSize0={setIsHoveredSize0} />
       <Testimonials setIsHoveredSize0={setIsHoveredSize0} />

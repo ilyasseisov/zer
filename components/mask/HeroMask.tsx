@@ -8,8 +8,6 @@ import { useEffect } from "react";
 // gsap
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-// functions
-import { handleScrollToFooter } from "@/lib/utils";
 
 // types
 type HeroMaskProps = {

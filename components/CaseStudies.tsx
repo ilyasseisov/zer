@@ -5,7 +5,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import Image from "next/image";
 
 const CaseStudies: FC = () => {
   const firstText = useRef(null);
@@ -43,7 +42,7 @@ const CaseStudies: FC = () => {
           onUpdate: (e) => {
             direction = e.direction * -1;
           },
-          markers: true,
+          // markers: true,
         },
         x: "-500px",
       });
