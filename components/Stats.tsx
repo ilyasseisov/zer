@@ -36,7 +36,7 @@ const Stats: FC = () => {
         trigger: containerRef.current,
         start: "top center",
         end: "bottom bottom",
-        markers: true,
+        // markers: true,
         onEnter: () => {
           if (tl.current) {
             tl.current.play();
