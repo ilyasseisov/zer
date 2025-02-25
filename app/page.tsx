@@ -48,6 +48,7 @@ import ClientsMask from "@/components/mask/ClientsMask";
 import TestimonialsMask from "@/components/mask/TestimonialsMask";
 import FooterMask from "@/components/mask/FooterMask";
 import CaseStudiesMask from "@/components/mask/CaseStudiesMask";
+import StatsMask from "@/components/mask/StatsMask";
 //
 //
 const Home: FC = () => {
@@ -119,7 +120,7 @@ const Home: FC = () => {
   return (
     <main className="container w-full max-w-none">
       {/* mask */}
-      {/* <motion.div
+      <motion.div
         className="mask-hero fixed z-[9999] w-full"
         animate={{
           WebkitMaskPosition: `${(x ?? 0) - size / 2}px ${(y ?? 0) - size / 2}px`,
@@ -144,13 +145,14 @@ const Home: FC = () => {
           <CaseStudiesMask setIsHovered={setIsHovered} />
           <AboutMask setIsHovered={setIsHovered} />
           <ServicesMask />
+          <StatsMask setIsHovered={setIsHovered} />
           <ExperienceMask setIsHovered={setIsHovered} />
           <ClientsMask />
           <TestimonialsMask setIsHovered={setIsHovered} />
           <HelpMask setIsHovered={setIsHovered} />
           <FooterMask />
         </div>
-      </motion.div> */}
+      </motion.div>
       {/* END mask */}
 
       {/* body */}
