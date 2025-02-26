@@ -27,16 +27,16 @@ const Stats: FC = () => {
     () => {
       tl.current = gsap.timeline({ paused: true }).from("[data-counter]", {
         opacity: 1,
-        duration: 0.5,
+        duration: 0.1,
         ease: "sine.inOut",
         onComplete: () => setIsAnimating(true),
       });
 
       ScrollTrigger.create({
         trigger: containerRef.current,
-        start: "top center",
+        start: "top bottom",
         end: "bottom bottom",
-        // markers: true,
+        markers: true,
         onEnter: () => {
           if (tl.current) {
             tl.current.play();
