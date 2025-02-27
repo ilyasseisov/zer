@@ -636,7 +636,34 @@
       transform: translateY(calc(-50% + 5px));
     }
   }
-  .custom-border {
-    border: 4px solid white;
+  #location .link {
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.1175em;
+    word-spacing: 0.3em;
+    position: relative;
+  }
+  #location .link__svg {
+    width: 100%;
+    height: auto;
+    transform-box: fill-box;
+    fill: #ffffff;
+    stroke: #ffffff;
+    stroke-width: 0.05em;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    position: relative;
+  }
+  #location .link__text {
+    animation: rotateReverse normal infinite 20s linear;
+    transform-origin: 50% 50%;
+  }
+  @keyframes rotateReverse {
+    to {
+      transform: rotate(-360deg);
+    }
   }
 }

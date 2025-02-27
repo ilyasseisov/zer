@@ -108,7 +108,13 @@ const Footer: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
                   content={{ text: "hi@zer.design", hover: emailText }}
                 />
               </div>
-              <div className="col-span-12 text-white md:col-span-6 2xl:col-span-12">
+              <div className="col-span-12 mb-4 text-white md:col-span-6 2xl:col-span-12">
+                <HoverElement
+                  setIsHoveredSize0={setIsHoveredSize0}
+                  content={{ text: "Ashgabat • Dubai", hover: "Visit us" }}
+                />
+              </div>
+              <div className="col-span-12 mb-4 text-white md:col-span-6 2xl:col-span-12">
                 <HoverElement
                   setIsHoveredSize0={setIsHoveredSize0}
                   content={{ text: "+993 65 805 324", hover: "Call us" }}

@@ -36,6 +36,7 @@ import ShadeTopBottom from "@/components/misc/ShadeTopBottom";
 import SocialIcons from "@/components/SocialIcons";
 import CaseStudies from "@/components/CaseStudies";
 import Stats from "@/components/Stats";
+import Location from "@/components/Location";
 
 //// components (mask)
 import HeroMask from "@/components/mask/HeroMask";
@@ -175,6 +176,7 @@ const Home: FC = () => {
       <Footer setIsHoveredSize0={setIsHoveredSize0} />
       {/*  */}
       <SocialIcons isLoading={isLoading} />
+      <Location isLoading={isLoading} />
       <ShadeTopBottom />
       {/* END body */}
     </main>
