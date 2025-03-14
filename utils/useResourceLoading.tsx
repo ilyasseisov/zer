@@ -56,7 +56,7 @@ const useResourceLoading = () => {
     const fallbackTimeout = setTimeout(() => {
       console.log("Fallback timeout triggered");
       setIsLoading(false);
-    }, 1000);
+    }, 5000);
 
     return () => {
       clearTimeout(fallbackTimeout);
