@@ -11,11 +11,11 @@ type StatsMaskProps = {
 const StatsMask: FC<StatsMaskProps> = ({ setIsHovered }) => {
   // Stats data for easy maintenance
   const statsData = [
-    { value: 6, label: "FANCY STICKERS" },
-    { value: 66, label: "PRICY WRAPPING" },
+    { value: 40, label: "FANCY STICKERS" },
+    { value: 118, label: "PRICY WRAPPING" },
     { value: 21, label: "HYPED ANIMATIONS" },
     { value: 4, label: "ANOTHER TEMPLATE" },
-    { value: 6, label: "MEMES" },
+    { value: 481, label: "FUN MEMES" },
     { value: 9, label: "FREE PENS & PADS" },
   ];
 

@@ -15,11 +15,11 @@ const Stats: FC = () => {
 
   // Stats data for easy maintenance
   const statsData = [
-    { value: 6, label: "BRANDING" },
-    { value: 66, label: "PACKAGING" },
+    { value: 40, label: "BRANDING" },
+    { value: 118, label: "PACKAGING" },
     { value: 21, label: "MOTION DESIGNS" },
     { value: 4, label: "WEBSITES & APPS" },
-    { value: 6, label: "SMM" },
+    { value: 481, label: "DIGITAL MARKETING" },
     { value: 9, label: "EXHIBITION" },
   ];
 
