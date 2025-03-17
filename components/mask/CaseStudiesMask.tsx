@@ -76,7 +76,7 @@ const CaseStudiesMask: FC<CaseStudiesMaskProps> = ({ setIsHovered }) => {
           className="relative m-0 pr-[50px] font-stolzl text-[80px] font-medium tracking-widest text-dark md:text-[100px] xl:text-[120px] 2xl:text-[160px]"
           ref={firstText}
         >
-          <a target="_blank" href="https://zer.design/case-studies">
+          <a target="_blank" href="https://zer.design/blog/case-studies/">
             CLICK TO SEE &bull; CLICK TO SEE &bull;
           </a>
         </p>
@@ -84,7 +84,7 @@ const CaseStudiesMask: FC<CaseStudiesMaskProps> = ({ setIsHovered }) => {
           className="absolute left-full top-0 m-0 pr-[50px] font-stolzl text-[80px] font-medium tracking-widest text-dark md:text-[100px] xl:text-[120px] 2xl:text-[160px]"
           ref={secondText}
         >
-          <a target="_blank" href="https://zer.design/case-studies">
+          <a target="_blank" href="https://zer.design/blog/case-studies/">
             CLICK TO SEE &bull; CLICK TO SEE &bull;
           </a>
         </p>
