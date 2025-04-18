@@ -120,6 +120,12 @@ const Footer: FC<HoverProps> = ({ setIsHoveredSize0 }) => {
                   content={{ text: "+993 65 805 234", hover: "Call us" }}
                 />
               </div>
+              <div className="col-span-12 mb-4 text-white md:col-span-6 2xl:col-span-12">
+                <HoverElement
+                  setIsHoveredSize0={setIsHoveredSize0}
+                  content={{ text: "+971 585 373 877", hover: "Dubai 🤙🏻" }}
+                />
+              </div>
             </div>
           </div>
         </div>
